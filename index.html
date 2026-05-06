@@ -4,51 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <title>CanDisp</title>
-
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        max-width: 800px;
-        margin: auto;
-        padding: 20px;
-        line-height: 1.6;
-    }
-
-    h1, h2 {
-        margin-top: 40px;
-    }
-
-    .hero {
-        margin-top: 60px;
-    }
-    .hero-image {
-        margin-top: 30px;
-        max-width: 80%;
-        height: auto;
-        display: block;
-    }
-
-    .feature {
-        margin-bottom: 10px;
-    }
-
-    footer {
-        margin-top: 60px;
-        font-size: 0.9em;
-        color: #666;
-    }
-    .device-image {
-        margin-top: 20px;
-        max-width: 500px;
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-</style>
-
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Galerie</a>
+    <a href="downloads.html">Downloads</a>
+    <a href="docs.html">Dokumentation</a>
+    <a href="impressum.html">Impressum</a>
+</nav>
 
 <header class="hero">
     <img class="hero-image" src="images/Feature_graphic.png" alt="CanDisp CAN Bus Display mit verschiedenen Anzeigeansichten">
@@ -71,6 +38,7 @@
         <li class="feature">Echtzeit-Anzeige von CAN-Daten</li>
         <li class="feature">1.85" rundes Display, gut ablesbar bei Sonnenlicht</li>
         <li class="feature">16 frei konfigurierbare Anzeigeseiten</li>
+        <li class="feature">Turn-by-Turn Navigationsanzeige über BLE</li>
         <li class="feature">WLAN-basierte Konfiguration über Webinterface</li>
         <li class="feature">Touch-Bedienung und optionale externe Taster</li>
     </ul>
@@ -81,6 +49,26 @@
     <p>
         Das Gerät arbeitet als passiver CAN-Bus Listener und sendet selbst keine Nachrichten.
         Bestehende Steuergeräte werden dadurch nicht beeinflusst.
+    </p>
+</section>
+
+<section>
+    <h2>Navigation</h2>
+
+    <p>
+        Das CanDisp unterstützt die Anzeige von Turn-by-Turn Navigationshinweisen
+        über Bluetooth Low Energy (BLE).
+    </p>
+
+    <p>
+        Die Verbindung erfolgt über die Android-App "CanDispNav".
+        Unterstützt werden die Navigationshinweise von Google Maps.
+    </p>
+
+    <p>
+        <a href="https://play.google.com/store/apps/details?id=com.candisp.candispnav">
+            CanDispNav im Google Play Store öffnen
+        </a>
     </p>
 </section>
 
@@ -126,10 +114,20 @@
 
 <section>
     <h2>Dokumentation & Downloads</h2>
+
+    <p>
+        Bedienungsanleitung, Firmware, Beispielkonfigurationen
+        und technische Dokumentation befinden sich in den folgenden Bereichen:
+    </p>
+
     <ul>
-        <li>Bedienungsanleitung (PDF)</li>
-        <li>Firmware</li>
-        <li>Konfigurationshinweise</li>
+        <li>
+            <a href="downloads.html">Downloads</a>
+        </li>
+
+        <li>
+            <a href="docs.html">Dokumentation</a>
+        </li>
     </ul>
 </section>
 

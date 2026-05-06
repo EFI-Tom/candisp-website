@@ -1,0 +1,82 @@
+nav {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: inherit;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    margin-top: 40px;
+}
+
+.hero {
+    margin-top: 60px;
+}
+
+.hero-image {
+    margin-top: 30px;
+    width: 70%;
+    max-width: 700px;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .hero-image {
+        width: 100%;
+    }
+}
+
+.feature {
+    margin-bottom: 10px;
+}
+
+footer {
+    margin-top: 60px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.device-image {
+    margin-top: 20px;
+    max-width: 360px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}

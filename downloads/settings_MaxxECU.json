@@ -1,0 +1,542 @@
+{
+  "CanBusMassages": [
+    {
+      "Name": "RPM",
+      "Unit": "1/min",
+      "MessageIdentifier": 1312,
+      "StartBit": 0,
+      "Length": 16,
+      "IsBigEndian": false,
+      "IsSigned": false,
+      "CanScale": 1,
+      "CanOffset": 0
+    },
+    {
+      "Name": "TPS",
+      "Unit": "%",
+      "MessageIdentifier": 1312,
+      "StartBit": 16,
+      "Length": 16,
+      "IsBigEndian": false,
+      "IsSigned": false,
+      "CanScale": 0.100000001,
+      "CanOffset": 0
+    },
+    {
+      "Name": "MAP",
+      "Unit": "kPa",
+      "MessageIdentifier": 1312,
+      "StartBit": 32,
+      "Length": 16,
+      "IsBigEndian": false,
+      "IsSigned": false,
+      "CanScale": 0.100000001,
+      "CanOffset": 0
+    },
+    {
+      "Name": "LAMBDA",
+      "Unit": "",
+      "MessageIdentifier": 1312,
+      "StartBit": 48,
+      "Length": 16,
+      "IsBigEndian": false,
+      "IsSigned": false,
+      "CanScale": 0.001,
+      "CanOffset": 0
+    },
+    {
+      "Name": "IGN Ang",
+      "Unit": "BTDC",
+      "MessageIdentifier": 1313,
+      "StartBit": 32,
+      "Length": 16,
+      "IsBigEndian": false,
+      "IsSigned": false,
+      "CanScale": 0.100000001,
+      "CanOffset": 0
+    },
+    {
+      "Name": "LAM Corr",
+      "Unit": "%",
+      "MessageIdentifier": 1316,
+      "StartBit": 16,
+      "Length": 16,
+      "IsBigEndian": false,
+      "IsSigned": true,
+      "CanScale": 0.100000001,
+      "CanOffset": 0
+    },
+    {
+      "Name": "IAT",
+      "Unit": "°C",
+      "MessageIdentifier": 1328,
+      "StartBit": 32,
+      "Length": 16,
+      "IsBigEndian": false,
+      "IsSigned": false,
+      "CanScale": 0.100000001,
+      "CanOffset": 0
+    },
+    {
+      "Name": "CLT",
+      "Unit": "°C",
+      "MessageIdentifier": 1328,
+      "StartBit": 48,
+      "Length": 16,
+      "IsBigEndian": false,
+      "IsSigned": false,
+      "CanScale": 0.100000001,
+      "CanOffset": 0
+    },
+    {
+      "Name": "EGT",
+      "Unit": "°C",
+      "MessageIdentifier": 1329,
+      "StartBit": 48,
+      "Length": 16,
+      "IsBigEndian": false,
+      "IsSigned": false,
+      "CanScale": 1,
+      "CanOffset": 0
+    },
+    {
+      "Name": "FUEL Press",
+      "Unit": "kPa",
+      "MessageIdentifier": 1335,
+      "StartBit": 0,
+      "Length": 16,
+      "IsBigEndian": false,
+      "IsSigned": false,
+      "CanScale": 0.100000001,
+      "CanOffset": 0
+    },
+    {
+      "Name": "SPEED",
+      "Unit": "km/h",
+      "MessageIdentifier": 1314,
+      "StartBit": 48,
+      "Length": 16,
+      "IsBigEndian": false,
+      "IsSigned": false,
+      "CanScale": 0.100000001,
+      "CanOffset": 0
+    },
+    {
+      "Name": "LAM Target",
+      "Unit": "",
+      "MessageIdentifier": 1319,
+      "StartBit": 48,
+      "Length": 16,
+      "IsBigEndian": false,
+      "IsSigned": true,
+      "CanScale": 0.001,
+      "CanOffset": 0
+    },
+    {
+      "Name": "FUEL PW",
+      "Unit": "ms",
+      "MessageIdentifier": 1314,
+      "StartBit": 0,
+      "Length": 16,
+      "IsBigEndian": false,
+      "IsSigned": false,
+      "CanScale": 0.01,
+      "CanOffset": 0
+    },
+    {
+      "Name": "L/km",
+      "Unit": "L/km",
+      "MessageIdentifier": 1336,
+      "StartBit": 0,
+      "Length": 16,
+      "IsBigEndian": false,
+      "IsSigned": false,
+      "CanScale": 0.100000001,
+      "CanOffset": 0
+    },
+    {
+      "Name": "Av. L/km",
+      "Unit": "L/km",
+      "MessageIdentifier": 1336,
+      "StartBit": 16,
+      "Length": 16,
+      "IsBigEndian": false,
+      "IsSigned": false,
+      "CanScale": 0.100000001,
+      "CanOffset": 0
+    },
+    {
+      "Name": "Tank",
+      "Unit": "L",
+      "MessageIdentifier": 1344,
+      "StartBit": 16,
+      "Length": 16,
+      "IsBigEndian": false,
+      "IsSigned": false,
+      "CanScale": 0.01,
+      "CanOffset": 0
+    }
+  ],
+  "SignalDisplaySettings": [
+    {
+      "Name": "RPM",
+      "ScaleFac": 1000,
+      "ScaleTickNum": 81,
+      "ScaleMinVal": 0,
+      "ScaleMaxVal": 10000,
+      "ScaleBlueStartVal": 0,
+      "ScaleBlueEndVal": 2000,
+      "ScaleRedStartVal": 8000,
+      "ScaleRedEndVal": 10000,
+      "ScaleLabelFormat": "%1.0f",
+      "ValLabelFormat": "%1.0f"
+    },
+    {
+      "Name": "TPS",
+      "ScaleFac": 1,
+      "ScaleTickNum": 51,
+      "ScaleMinVal": 0,
+      "ScaleMaxVal": 100,
+      "ScaleBlueStartVal": -11,
+      "ScaleBlueEndVal": -10,
+      "ScaleRedStartVal": 20000,
+      "ScaleRedEndVal": 20010,
+      "ScaleLabelFormat": "%1.0f",
+      "ValLabelFormat": "%1.0f"
+    },
+    {
+      "Name": "MAP",
+      "ScaleFac": 1,
+      "ScaleTickNum": 51,
+      "ScaleMinVal": 0,
+      "ScaleMaxVal": 200,
+      "ScaleBlueStartVal": 0,
+      "ScaleBlueEndVal": 0,
+      "ScaleRedStartVal": 150,
+      "ScaleRedEndVal": 200,
+      "ScaleLabelFormat": "%1.0f",
+      "ValLabelFormat": "%1.0f"
+    },
+    {
+      "Name": "LAMBDA",
+      "ScaleFac": 1,
+      "ScaleTickNum": 41,
+      "ScaleMinVal": 0.800000012,
+      "ScaleMaxVal": 1.200000048,
+      "ScaleBlueStartVal": 0.699999988,
+      "ScaleBlueEndVal": 0.850000024,
+      "ScaleRedStartVal": 1.149999976,
+      "ScaleRedEndVal": 1.200000048,
+      "ScaleLabelFormat": "%1.2f",
+      "ValLabelFormat": "%1.2f"
+    },
+    {
+      "Name": "IGN Ang",
+      "ScaleFac": 1,
+      "ScaleTickNum": 71,
+      "ScaleMinVal": 0,
+      "ScaleMaxVal": 28,
+      "ScaleBlueStartVal": 0,
+      "ScaleBlueEndVal": 0,
+      "ScaleRedStartVal": 20,
+      "ScaleRedEndVal": 28,
+      "ScaleLabelFormat": "%1.0f",
+      "ValLabelFormat": "%1.0f"
+    },
+    {
+      "Name": "LAM Corr",
+      "ScaleFac": 1,
+      "ScaleTickNum": 61,
+      "ScaleMinVal": -30,
+      "ScaleMaxVal": 30,
+      "ScaleBlueStartVal": -30,
+      "ScaleBlueEndVal": -10,
+      "ScaleRedStartVal": 10,
+      "ScaleRedEndVal": 30,
+      "ScaleLabelFormat": "%1.0f",
+      "ValLabelFormat": "%1.0f"
+    },
+    {
+      "Name": "IAT",
+      "ScaleFac": 1,
+      "ScaleTickNum": 61,
+      "ScaleMinVal": -10,
+      "ScaleMaxVal": 50,
+      "ScaleBlueStartVal": -10,
+      "ScaleBlueEndVal": 0,
+      "ScaleRedStartVal": 40,
+      "ScaleRedEndVal": 50,
+      "ScaleLabelFormat": "%1.0f",
+      "ValLabelFormat": "%1.0f"
+    },
+    {
+      "Name": "CLT",
+      "ScaleFac": 1,
+      "ScaleTickNum": 81,
+      "ScaleMinVal": 40,
+      "ScaleMaxVal": 120,
+      "ScaleBlueStartVal": 20,
+      "ScaleBlueEndVal": 60,
+      "ScaleRedStartVal": 100,
+      "ScaleRedEndVal": 150,
+      "ScaleLabelFormat": "%1.0f",
+      "ValLabelFormat": "%1.0f"
+    },
+    {
+      "Name": "EGT",
+      "ScaleFac": 1,
+      "ScaleTickNum": 51,
+      "ScaleMinVal": 300,
+      "ScaleMaxVal": 800,
+      "ScaleBlueStartVal": 300,
+      "ScaleBlueEndVal": 500,
+      "ScaleRedStartVal": 650,
+      "ScaleRedEndVal": 800,
+      "ScaleLabelFormat": "%1.0f",
+      "ValLabelFormat": "%1.0f"
+    },
+    {
+      "Name": "FUEL Press",
+      "ScaleFac": 1,
+      "ScaleTickNum": 51,
+      "ScaleMinVal": 100,
+      "ScaleMaxVal": 500,
+      "ScaleBlueStartVal": 100,
+      "ScaleBlueEndVal": 250,
+      "ScaleRedStartVal": 400,
+      "ScaleRedEndVal": 500,
+      "ScaleLabelFormat": "%1.0f",
+      "ValLabelFormat": "%1.0f"
+    },
+    {
+      "Name": "SPEED",
+      "ScaleFac": 1,
+      "ScaleTickNum": 51,
+      "ScaleMinVal": 0,
+      "ScaleMaxVal": 250,
+      "ScaleBlueStartVal": 0,
+      "ScaleBlueEndVal": 0,
+      "ScaleRedStartVal": 230,
+      "ScaleRedEndVal": 350,
+      "ScaleLabelFormat": "%1.0f",
+      "ValLabelFormat": "%1.0f"
+    },
+    {
+      "Name": "LAM Target",
+      "ScaleFac": 1,
+      "ScaleTickNum": 41,
+      "ScaleMinVal": 0.800000012,
+      "ScaleMaxVal": 1.200000048,
+      "ScaleBlueStartVal": 0.699999988,
+      "ScaleBlueEndVal": 0.850000024,
+      "ScaleRedStartVal": 1.149999976,
+      "ScaleRedEndVal": 1.200000048,
+      "ScaleLabelFormat": "%1.2f",
+      "ValLabelFormat": "%1.2f"
+    },
+    {
+      "Name": "FUEL PW",
+      "ScaleFac": 1,
+      "ScaleTickNum": 51,
+      "ScaleMinVal": 0,
+      "ScaleMaxVal": 2,
+      "ScaleBlueStartVal": 0,
+      "ScaleBlueEndVal": 0,
+      "ScaleRedStartVal": 0,
+      "ScaleRedEndVal": 0,
+      "ScaleLabelFormat": "%1.1f",
+      "ValLabelFormat": "%1.2f"
+    },
+    {
+      "Name": "L/km",
+      "ScaleFac": 1,
+      "ScaleTickNum": 41,
+      "ScaleMinVal": 0,
+      "ScaleMaxVal": 20,
+      "ScaleBlueStartVal": 0,
+      "ScaleBlueEndVal": 0,
+      "ScaleRedStartVal": 0,
+      "ScaleRedEndVal": 0,
+      "ScaleLabelFormat": "%1.0f",
+      "ValLabelFormat": "%1.1f"
+    },
+    {
+      "Name": "Av. L/km",
+      "ScaleFac": 1,
+      "ScaleTickNum": 51,
+      "ScaleMinVal": 0,
+      "ScaleMaxVal": 10,
+      "ScaleBlueStartVal": 0,
+      "ScaleBlueEndVal": 0,
+      "ScaleRedStartVal": 0,
+      "ScaleRedEndVal": 0,
+      "ScaleLabelFormat": "%1.0f",
+      "ValLabelFormat": "%1.1f"
+    },
+    {
+      "Name": "Tank",
+      "ScaleFac": 1,
+      "ScaleTickNum": 81,
+      "ScaleMinVal": 0,
+      "ScaleMaxVal": 80,
+      "ScaleBlueStartVal": 0,
+      "ScaleBlueEndVal": 0,
+      "ScaleRedStartVal": 0,
+      "ScaleRedEndVal": 2,
+      "ScaleLabelFormat": "%1.0f",
+      "ValLabelFormat": "%1.1f"
+    }
+  ],
+  "DisplaySettings": [
+    {
+      "GaugeType": 7,
+      "Val1": 8,
+      "Val2": 3,
+      "Val1TextColor": false,
+      "Val2TextColor": false,
+      "Visible": true
+    },
+    {
+      "GaugeType": 0,
+      "Val1": 1,
+      "Val2": 1,
+      "Val1TextColor": false,
+      "Val2TextColor": false,
+      "Visible": true
+    },
+    {
+      "GaugeType": 0,
+      "Val1": 2,
+      "Val2": 2,
+      "Val1TextColor": false,
+      "Val2TextColor": false,
+      "Visible": true
+    },
+    {
+      "GaugeType": 0,
+      "Val1": 3,
+      "Val2": 3,
+      "Val1TextColor": false,
+      "Val2TextColor": false,
+      "Visible": true
+    },
+    {
+      "GaugeType": 0,
+      "Val1": 4,
+      "Val2": 4,
+      "Val1TextColor": false,
+      "Val2TextColor": false,
+      "Visible": true
+    },
+    {
+      "GaugeType": 0,
+      "Val1": 5,
+      "Val2": 5,
+      "Val1TextColor": false,
+      "Val2TextColor": false,
+      "Visible": true
+    },
+    {
+      "GaugeType": 0,
+      "Val1": 6,
+      "Val2": 6,
+      "Val1TextColor": false,
+      "Val2TextColor": false,
+      "Visible": true
+    },
+    {
+      "GaugeType": 0,
+      "Val1": 7,
+      "Val2": 7,
+      "Val1TextColor": false,
+      "Val2TextColor": false,
+      "Visible": true
+    },
+    {
+      "GaugeType": 0,
+      "Val1": 8,
+      "Val2": 8,
+      "Val1TextColor": false,
+      "Val2TextColor": false,
+      "Visible": true
+    },
+    {
+      "GaugeType": 1,
+      "Val1": 15,
+      "Val2": 13,
+      "Val1TextColor": false,
+      "Val2TextColor": false,
+      "Visible": true
+    },
+    {
+      "GaugeType": 0,
+      "Val1": 10,
+      "Val2": 10,
+      "Val1TextColor": false,
+      "Val2TextColor": false,
+      "Visible": true
+    },
+    {
+      "GaugeType": 2,
+      "Val1": 3,
+      "Val2": 11,
+      "Val1TextColor": false,
+      "Val2TextColor": false,
+      "Visible": true
+    },
+    {
+      "GaugeType": 3,
+      "Val1": 11,
+      "Val2": 3,
+      "Val1TextColor": false,
+      "Val2TextColor": false,
+      "Visible": true
+    },
+    {
+      "GaugeType": 1,
+      "Val1": 5,
+      "Val2": 1,
+      "Val1TextColor": false,
+      "Val2TextColor": false,
+      "Visible": true
+    },
+    {
+      "GaugeType": 1,
+      "Val1": 5,
+      "Val2": 0,
+      "Val1TextColor": false,
+      "Val2TextColor": false,
+      "Visible": true
+    },
+    {
+      "GaugeType": 4,
+      "Val1": 8,
+      "Val2": 3,
+      "Val1TextColor": false,
+      "Val2TextColor": false,
+      "Visible": true
+    },
+    {
+      "GaugeType": 5,
+      "Val1": 0,
+      "Val2": 0,
+      "Val1TextColor": false,
+      "Val2TextColor": false,
+      "Visible": true
+    },
+    {
+      "GaugeType": 6,
+      "Val1": 0,
+      "Val2": 0,
+      "Val1TextColor": false,
+      "Val2TextColor": false,
+      "Visible": true
+    }
+  ],
+  "SpeedoSettings": {
+    "Val1": 10,
+    "Val2": 7,
+    "Val3": 15,
+    "Val4": 0
+  }
+}

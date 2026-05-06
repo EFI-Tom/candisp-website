@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Dokumentation - CanDisp</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Galerie</a>
+    <a href="downloads.html">Downloads</a>
+    <a href="docs.html">Dokumentation</a>
+    <a href="impressum.html">Impressum</a>
+</nav>
+
+<h1>Dokumentation</h1>
+
+    <h2>Erste Schritte</h2>
+<p>
+    Diese Dokumentation enthält zur Zeit nur die aller ersten Schritte und Hinweise zur Inbetriebnahme. 
+    Es wird dringend empfohlen die Bedienungsanleitung zu lesen, welche im 
+    <a href="downloads.html">Downloadbereich</a> verfügbar ist.
+ 
+</p>
+
+<section>
+    <h3>Stromversorgung</h3>
+
+    <p>
+        Verbinde die schwarze Leitung des CanDisp-Geräts mit Masse (GND)
+        und die rote Leitung mit einer geschalteten Gleichspannungsquelle.
+    </p>
+
+    <p>
+        Es wird empfohlen, eine Versorgung zu verwenden,
+        die gemeinsam mit dem Fahrzeug oder dem übergeordneten System
+        ein- und ausgeschaltet wird.
+    </p>
+
+    <h3>Technische Daten</h3>
+
+    <ul>
+        <li>Versorgungsspannung: 5 V DC bis 15 V DC</li>
+        <li>Typische Leistungsaufnahme: 0.8 W</li>
+        <li>Maximale Leistungsaufnahme: 3 W</li>
+        <li>Empfohlene externe Absicherung: max. 5 A</li>
+    </ul>
+
+    <p>
+        Nach dem Einschalten der Versorgungsspannung startet das Gerät automatisch.
+    </p>
+
+    <p>
+        Achtung: Eine Überschreitung des zulässigen Spannungsbereichs kann zur Beschädigung des Geräts führen.
+    </p>
+
+</section>
+<section>
+    <h3>CAN-Bus Anschluss</h3>
+
+    <p>
+        Verbinde die weiße Leitung des CanDisp-Geräts mit CAN Low (CAN_L)
+        und die grüne Leitung mit CAN High (CAN_H) des CAN-Netzwerks.
+    </p>
+
+    <p>
+        Das Gerät arbeitet als passiver CAN-Bus Listener und sendet selbst keine CAN-Nachrichten.
+        Bestehende Steuergeräte werden dadurch nicht beeinflusst.
+    </p>
+
+    <h3>Hinweise</h3>
+
+    <ul>
+        <li>Unterstützte CAN-Bitraten können in der Weboberfläche konfiguriert werden.</li>
+        <li>Das Gerät unterstützt Standard- und Extended-CAN-Identifier.</li>
+        <li>Die interne 120-Ohm-Split-Terminierung kann optional aktiviert werden.</li>
+    </ul>
+
+</section>
+
+<section>
+    <h2>Konfiguration</h2>
+        
+    <p>
+        Das CanDisp-Gerät stellt einen eigenen WLAN Access Point bereit,
+        über den die Konfiguration des Geräts erfolgt.
+    </p>
+
+    <p>
+        Verbinde dich mit dem WLAN-Netzwerk des Geräts und öffne anschließend
+        die Konfigurationsoberfläche im Webbrowser.
+    </p>
+
+    <p>
+        Über die Weboberfläche können unter anderem folgende Einstellungen vorgenommen werden:
+    </p>
+
+    <ul>
+        <li>CAN-Bus Bitrate</li>
+        <li>Signaldefinitionen</li>
+        <li>Anzeige- und Screen-Konfiguration</li>
+        <li>Displayhelligkeit</li>
+        <li>DBC-Import</li>
+        <li>Firmware-Updates</li>
+    </ul>
+
+    <p>
+        Weitere Informationen befinden sich in der Bedienungsanleitung.
+    </p>
+
+    <img class="device-image"
+        src="images/docs/webinterface.jpg"
+        alt="CanDisp Webinterface">
+
+</section>
+
+<section>
+    <h2>Navigation</h2>
+
+    <p>
+        CanDisp kann Turn-by-Turn Navigationshinweise anzeigen,
+        die von der Android-App CanDispNav per Bluetooth Low Energy (BLE)
+        an das Gerät übertragen werden.
+    </p>
+
+    <p>
+        Die App wertet Navigationshinweise von Google Maps aus und überträgt
+        Richtungspfeil, Straßennamen und Distanz bis zur nächsten Abbiegung
+        an das CanDisp-Gerät.
+    </p>
+
+    <p>
+        Die CanDispNav-App ist im Google Play Store verfügbar:
+        <br>
+        <a href="https://play.google.com/store/apps/details?id=com.candisp.candispnav">
+            CanDispNav im Google Play Store öffnen
+        </a>
+    </p>
+
+    <p>
+        Weitere Informationen befinden sich in der Bedienungsanleitung.
+    </p>
+
+    <img class="device-image"
+         src="images/docs/CanDisp_Nav.png"
+         alt="CanDisp Navigationsanzeige">
+</section>
+
+<section>
+    <h2>Firmware-Update</h2>
+
+    <p>
+        Firmware-Updates werden über die integrierte Weboberfläche des Geräts durchgeführt.
+    </p>
+
+    <p>
+        Aktuelle Firmware-Versionen befinden sich im
+        <a href="downloads.html">Downloadbereich</a>.
+    </p>
+
+</section>
+
+<section>
+    <h2>Sicherheitshinweise</h2>
+
+    <p>
+        Das Gerät ist ausschließlich für den Einsatz in geeigneten
+        Niederspannungs- und CAN-Bus-Systemen vorgesehen.
+    </p>
+
+    <p>
+        Der elektrische Anschluss darf nur bei abgeschalteter Versorgungsspannung erfolgen.
+    </p>
+</section>
+
+</body>
+</html>
