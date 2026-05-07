@@ -28,41 +28,14 @@
 
     <p>
         CanDisp unterstützt unterschiedliche Anzeigeformen
-        für einzelne oder kombinierte Messwerte. 
-        Hier sind die ungeschönten screenshots 1:1 aus dem Bildspeicher des Geräts ausgelesen.
+        für einzelne oder kombinierte Messwerte. Hier sind die 
+        ungeschönten Screenshots 1:1 aus dem Bildspeicher des Geräts ausgelesen.
     </p>
 
-    <!-- <div class="gallery-grid"> -->
-    <!-- <div class="gallery-scroll">
 
-        <img src="images/gallery/CanDisp_Gauge0_b.png"
-             alt="CanDisp Anzeige Layout 1">
-
-        <img src="images/gallery/CanDisp_Gauge0_c.png"
-             alt="CanDisp Anzeige Layout 2">
-
-        <img src="images/gallery/CanDisp_Gauge1.png"
-             alt="CanDisp Anzeige Layout 3">
-
-        <img src="images/gallery/CanDisp_Gauge2.png"
-             alt="CanDisp Anzeige Layout 4">
-
-        <img src="images/gallery/CanDisp_Gauge3.png"
-             alt="CanDisp Anzeige Layout 5">
-
-        <img src="images/gallery/CanDisp_Gauge4.png"
-             alt="CanDisp Anzeige Layout 6">
-
-        <img src="images/gallery/CanDisp_Speedo.png"
-             alt="CanDisp Anzeige Layout Speedo">
-
-        <img src="images/gallery/CanDisp_Nav.png" 
-             alt="CanDisp Navigation Layout">
-
-    </div> -->
     <div class="gallery-wrapper">
-    <button class="nav-btn left" onclick="scrollGal(-320)">❮</button>
-    <div class="gallery-scroll" id="main-gal">
+    <button class="nav-btn left" onclick="scrollSmart(this, -320)">❮</button>
+    <div class="gallery-scroll">
         <img src="images/gallery/CanDisp_Gauge0_b.png"
              alt="CanDisp Anzeige Layout 1">
 
@@ -87,8 +60,8 @@
         <img src="images/gallery/CanDisp_Nav.png" 
              alt="CanDisp Navigation Layout">
     </div>
-    <button class="nav-btn right" onclick="scrollGal(320)">❯</button>
-</div>
+    <button class="nav-btn right" onclick="scrollSmart(this, 320)">❯</button>
+    </div>
 
 </section>
 
@@ -99,7 +72,9 @@
         Einige Fotos aus der echten Welt.
     </p>
 
-    <div class="gallery-grid">
+    <div class="gallery-wrapper">
+    <button class="nav-btn left" onclick="scrollSmart(this, -320)">❮</button>
+    <div class="gallery-scroll">
 
         <img src="images/gallery/IMG10.jpg" 
              alt="CanDisp Navigation Layout">
@@ -120,15 +95,15 @@
              alt="CanDisp Rueckseite">
 
     </div>
+    <button class="nav-btn right" onclick="scrollSmart(this, 320)">❯</button>
+    </div>
+
 </section>
 
 <script>
-    function scrollGal(distance) {
-        const gallery = document.getElementById('main-gal');
-        gallery.scrollBy({ 
-            left: distance, 
-            behavior: 'smooth' 
-        });
+    function scrollSmart(btn, distance) {
+        const gallery = btn.parentElement.querySelector('.gallery-scroll');
+        gallery.scrollBy({ left: distance, behavior: 'smooth' });
     }
 </script>
 
