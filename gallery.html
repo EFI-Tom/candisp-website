@@ -13,6 +13,7 @@
     <a href="gallery.html">Galerie</a>
     <a href="downloads.html">Downloads</a>
     <a href="docs.html">Dokumentation</a>
+    <a href="about.html">Die Storry</a>
     <a href="impressum.html">Impressum</a>
 </nav>
 
@@ -31,7 +32,8 @@
         Hier sind die ungeschönten screenshots 1:1 aus dem Bildspeicher des Geräts ausgelesen.
     </p>
 
-    <div class="gallery-grid">
+    <!-- <div class="gallery-grid"> -->
+    <!-- <div class="gallery-scroll">
 
         <img src="images/gallery/CanDisp_Gauge0_b.png"
              alt="CanDisp Anzeige Layout 1">
@@ -57,7 +59,37 @@
         <img src="images/gallery/CanDisp_Nav.png" 
              alt="CanDisp Navigation Layout">
 
+    </div> -->
+    <div class="gallery-wrapper">
+    <button class="nav-btn left" onclick="scrollGal(-320)">❮</button>
+    <div class="gallery-scroll" id="main-gal">
+        <img src="images/gallery/CanDisp_Gauge0_b.png"
+             alt="CanDisp Anzeige Layout 1">
+
+        <img src="images/gallery/CanDisp_Gauge0_c.png"
+             alt="CanDisp Anzeige Layout 2">
+
+        <img src="images/gallery/CanDisp_Gauge1.png"
+             alt="CanDisp Anzeige Layout 3">
+
+        <img src="images/gallery/CanDisp_Gauge2.png"
+             alt="CanDisp Anzeige Layout 4">
+
+        <img src="images/gallery/CanDisp_Gauge3.png"
+             alt="CanDisp Anzeige Layout 5">
+
+        <img src="images/gallery/CanDisp_Gauge4.png"
+             alt="CanDisp Anzeige Layout 6">
+
+        <img src="images/gallery/CanDisp_Speedo.png"
+             alt="CanDisp Anzeige Layout Speedo">
+
+        <img src="images/gallery/CanDisp_Nav.png" 
+             alt="CanDisp Navigation Layout">
     </div>
+    <button class="nav-btn right" onclick="scrollGal(320)">❯</button>
+</div>
+
 </section>
 
 <section>
@@ -90,5 +122,16 @@
     </div>
 </section>
 
+<script>
+    function scrollGal(distance) {
+        const gallery = document.getElementById('main-gal');
+        gallery.scrollBy({ 
+            left: distance, 
+            behavior: 'smooth' 
+        });
+    }
+</script>
+
 </body>
+
 </html>
