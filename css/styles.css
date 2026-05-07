@@ -31,7 +31,7 @@ h1, h2 {
 }
 
 .hero-image {
-    margin-top: 30px;
+    margin: 30px auto 0 auto;
     width: 70%;
     max-width: 700px;
     height: auto;
@@ -60,25 +60,7 @@ footer {
     width: 100%;
     height: auto;
     display: block;
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    margin-top: 30px;
-}
-
-.gallery-grid img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-@media (max-width: 768px) {
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
+    border-radius: 12px;
 }
 
 .gallery-scroll {
@@ -99,11 +81,45 @@ footer {
     scroll-snap-align: center;
 }
 
-.gallery-wrapper { position: relative; display: flex; align-items: center; }
-.nav-btn { 
-    background: rgba(0,0,0,0.5); color: white; border: none; 
-    padding: 15px; cursor: pointer; position: absolute; z-index: 10;
-    border-radius: 50%;
+.gallery-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
 }
-.left { left: 0; }
-.right { right: 0; }
+
+/* Die Buttons schick machen */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Zentriert den Button vertikal */
+    background: rgba(0, 0, 0, 0.4); /* Halbtransparenter Hintergrund */
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 5;
+    font-size: 1.2rem;
+    transition: background 0.3s;
+}
+
+.nav-btn:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* Button-Positionen links und rechts */
+.nav-btn.left {
+    left: 10px;
+}
+
+.nav-btn.right {
+    right: 10px;
+}
+
+/* Versteckt die Buttons auf Handys, da man dort eh wischt */
+@media (max-width: 768px) {
+    .nav-btn {
+        display: none;
+    }
+}
