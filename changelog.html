@@ -20,6 +20,133 @@
 <h1>Changelog</h1>
 
 <section>
+    <h2>Firmware 3.2.12</h2>
+    <p><strong>Umfangreiches Funktions- und Stabilitätsupdate mit Saab Trionic 7 Support, erweitertem DBC-Import, Recovery-System und verbesserter Navigation.</strong></p>
+
+    <ul>
+        <li>
+            <strong>Saab Trionic 7 Support hinzugefügt</strong>
+            <ul>
+                <li>Direkte Diagnosekommunikation mit Trionic-7-Steuergeräten</li>
+                <li>Einlesen des ECU-Symbolkatalogs und Auswahl interner T7-Messwerte</li>
+                <li>Freie Zuordnung der T7-Werte zu den CanDisp-Signalplätzen</li>
+                <li>Absicherung gespeicherter T7-Konfigurationen gegenüber abweichenden ECU-Softwareständen</li>
+            </ul>
+        </li>
+
+        <li>Anzahl der konfigurierbaren Messwerte von <strong>16 auf 60 Signale</strong> erweitert</li>
+
+        <li>
+            <strong>DBC-Import umfassend überarbeitet</strong>
+            <ul>
+                <li>Verbesserte Signalübersicht und Suchfunktion</li>
+                <li>Filterung unterstützter und nicht unterstützter Signale</li>
+                <li>Freie Zuordnung importierter Signale zu den 60 CanDisp-Signalplätzen</li>
+                <li>Verbesserte Verarbeitung größerer DBC-Dateien</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Recovery-System hinzugefügt</strong>
+            <ul>
+                <li>BootGuard erkennt wiederholte fehlgeschlagene Startversuche</li>
+                <li>Unabhängiger Minimal-Recovery-Modus mit eigenem WLAN</li>
+                <li>Firmware kann auch dann neu installiert werden, wenn die normale Firmware nicht mehr vollständig startet</li>
+                <li>Normaler Startversuch oder Zurücksetzen der Einstellungen direkt aus dem Recovery-Modus möglich</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Firmware-Update über WLAN weiter verbessert</strong>
+            <ul>
+                <li>Robustere Behandlung während Upload und Neustart</li>
+                <li>Downgrade auf ältere Firmware-Versionen weiterhin möglich</li>
+                <li>Verbesserte LVGL-Behandlung während des Updates</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Weboberfläche umfassend überarbeitet</strong>
+            <ul>
+                <li>Einheitlicheres und übersichtlicheres Design</li>
+                <li>Aufklappbare Einstellungsbereiche</li>
+                <li>Such-, Filter- sowie Expand-/Collapse-Funktionen für umfangreiche Konfigurationen</li>
+                <li>Verbesserte Bedienung auf Smartphones</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>WLAN- und Captive-Portal-Verhalten verbessert</strong>
+            <ul>
+                <li>WLAN bleibt aktiv, solange ein Endgerät verbunden ist</li>
+                <li>Verbesserter paralleler Betrieb von WLAN und BLE</li>
+                <li>Zugriff auf die Konfigurationsoberfläche zusätzlich über <strong>http://candisp.local/</strong></li>
+                <li>Robusteres Verhalten auf Smartphones und Desktop-Systemen</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Navigation erweitert</strong>
+            <ul>
+                <li>Unterstützung von <strong>OsmAnd</strong> über die CanDisp Navigation App</li>
+                <li>Google Maps weiterhin unterstützt</li>
+                <li>Unterstützung vorgeplanter bzw. importierter Routen über OsmAnd</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>BlitzerPro-Warnhinweise hinzugefügt</strong>
+            <ul>
+                <li>Warnmeldungen können als temporäres Overlay auf dem CanDisp angezeigt werden</li>
+                <li>Automatische Rückkehr zur vorherigen Anzeige nach Ende der Warnung</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Bluetooth-Kommunikation robuster gemacht</strong>
+            <ul>
+                <li>BLE-Stack auf NimBLE umgestellt</li>
+                <li>Verbindungs- und Wiederverbindungslogik verbessert</li>
+                <li>Stabilerer gleichzeitiger Betrieb mit WLAN</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>ESP-NOW überarbeitet</strong>
+            <ul>
+                <li>Stabilerer Betrieb durch dauerhaft verfügbaren Wi-Fi-Stack</li>
+                <li>Übertragung an die auf 60 Signale erweiterte Konfiguration angepasst</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Settings-Speicherung und -Import robuster gemacht</strong>
+            <ul>
+                <li>Größere Konfigurationen werden zuverlässiger verarbeitet</li>
+                <li>Verbesserte Speicherung und Wiederherstellung der erweiterten Signalanzahl</li>
+                <li>T7-Zuordnungen werden in Konfigurationsdateien berücksichtigt</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Touch-Bedienung der Helligkeit geändert</strong>
+            <ul>
+                <li>Helligkeitsregelung per Longpress jetzt über oberen bzw. unteren Displaybereich</li>
+                <li>Bedienung über externe Taster bleibt unverändert</li>
+            </ul>
+        </li>
+
+        <li>Interne LVGL-Thread-Sicherheit vereinheitlicht und verbessert</li>
+        <li>Reset- und Neustartverhalten insgesamt robuster gemacht</li>
+
+        <li>
+            Unterstützung zusätzlicher CanDisp-Displayvarianten auf Basis des
+            <strong>Waveshare 1.28"</strong> und <strong>Seeed 0.70"</strong> Displays ergänzt
+        </li>
+    </ul>
+</section>
+
+<section>
     <h2>Firmware 3.2.11</h2>
     <p><strong>Initiale öffentliche Release-Version für CanDisp TFT1.85TP.</strong></p>
 
