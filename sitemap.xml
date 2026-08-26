@@ -6,19 +6,27 @@
     </url>
 
     <url>
-        <loc>https://candisp.de/gallery.html</loc>
-    </url>
-
-    <url>
         <loc>https://candisp.de/about.html</loc>
     </url>
 
     <url>
-        <loc>https://candisp.de/downloads/</loc>
+        <loc>https://candisp.de/changelog.html</loc>
     </url>
 
     <url>
-        <loc>https://candisp.de/docs/</loc>
+        <loc>https://candisp.de/docs.html</loc>
+    </url>
+
+    <url>
+        <loc>https://candisp.de/downloads.html</loc>
+    </url>
+
+    <url>
+        <loc>https://candisp.de/gallery.html</loc>
+    </url>
+
+    <url>
+        <loc>https://candisp.de/howto_blitzerdepro.html
     </url>
 
 </urlset>
