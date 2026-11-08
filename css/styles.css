@@ -167,7 +167,7 @@ footer {
     display: inline-block;
     padding: 8px 14px;
     border-radius: 8px;
-    background: var(--action-background, #195b87);
+    background: #195b87;
     color: #fff;
     font-weight: 700;
     text-decoration: none;
@@ -175,14 +175,13 @@ footer {
 
 .dyno-button:hover,
 .download-button:hover {
-    background: var(--action-hover, #124569);
+    background: #124569;
     text-decoration: underline;
 }
 
 .dyno-button:focus-visible,
-.download-button:focus-visible,
-.downloads-theme-toggle:focus-visible {
-    outline: 3px solid var(--action-focus, #195b87);
+.download-button:focus-visible {
+    outline: 3px solid #195b87;
     outline-offset: 3px;
 }
 
@@ -296,19 +295,6 @@ footer {
     color: #17212a;
 }
 
-.downloads-page[data-download-theme="dark"] {
-    --download-card: #222;
-    --download-border: #3b3b3b;
-    --download-muted: #b7b7b7;
-    --download-link: #e3e3e3;
-    --action-background: #292929;
-    --action-hover: #363636;
-    --action-focus: #f39c12;
-    color-scheme: dark;
-    background: #171717;
-    color: #f2f2f2;
-}
-
 .downloads-page nav {
     border-color: var(--download-border);
 }
@@ -324,11 +310,6 @@ footer {
 }
 
 .downloads-header {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
     margin: clamp(28px, 6vw, 52px) 0 24px;
 }
 
@@ -340,22 +321,6 @@ footer {
 
 .downloads-kicker {
     color: var(--download-link);
-}
-
-.downloads-theme-toggle {
-    min-height: 44px;
-    padding: 7px 13px;
-    border: 1px solid var(--download-border);
-    border-radius: 8px;
-    background: var(--download-card);
-    color: inherit;
-    font: inherit;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.downloads-theme-toggle:hover {
-    text-decoration: underline;
 }
 
 .download-card {
@@ -376,12 +341,6 @@ footer {
     font-size: clamp(1.2rem, 4vw, 1.5rem);
     line-height: 1.25;
     overflow-wrap: anywhere;
-}
-
-.downloads-page[data-download-theme="dark"] .download-card h2 {
-    padding-left: 0;
-    border-left: 0;
-    color: var(--download-accent);
 }
 
 .download-card p {
