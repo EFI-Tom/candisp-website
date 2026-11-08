@@ -123,3 +123,158 @@ footer {
         display: none;
     }
 }
+
+/* Street Dyno */
+#main-nav nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+}
+
+#main-nav nav a {
+    margin-right: 0;
+    padding-block: 3px;
+    white-space: nowrap;
+}
+
+.dyno-intro {
+    margin: clamp(32px, 6vw, 64px) 0 40px;
+}
+
+.dyno-kicker {
+    margin: 0 0 8px;
+    color: #225d84;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.dyno-intro h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.15;
+}
+
+.dyno-lead {
+    max-width: 62ch;
+    font-size: 1.125rem;
+}
+
+.dyno-button {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: #195b87;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.dyno-button:hover {
+    background: #124569;
+    text-decoration: underline;
+}
+
+.dyno-button:focus-visible {
+    outline: 3px solid #195b87;
+    outline-offset: 3px;
+}
+
+.dyno-teaser {
+    margin-top: 32px;
+    padding: 18px 22px;
+    border-left: 4px solid #195b87;
+    border-radius: 0 12px 12px 0;
+    background: #f0f6fa;
+}
+
+.dyno-teaser h2,
+.dyno-comparison h2 {
+    margin: 0;
+}
+
+.dyno-teaser p {
+    margin: 6px 0 12px;
+}
+
+.dyno-steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    padding: 0;
+    list-style: none;
+}
+
+.dyno-steps li {
+    padding: 16px;
+    border: 1px solid #dce5eb;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.dyno-steps img {
+    display: block;
+    width: min(100%, 160px);
+    height: auto;
+    margin: 0 auto 12px;
+}
+
+.dyno-steps h3 {
+    margin: 0;
+}
+
+.dyno-steps p {
+    margin: 4px 0 0;
+}
+
+.dyno-comparison {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 305px);
+    align-items: center;
+    gap: 24px;
+    margin-top: 36px;
+    padding: clamp(16px, 4vw, 28px);
+    border: 1px solid #dce5eb;
+    border-radius: 12px;
+    background: #f0f6fa;
+}
+
+.dyno-comparison figure {
+    width: min(100%, 305px);
+    margin: 0;
+    justify-self: center;
+}
+
+.dyno-comparison img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.dyno-comparison figcaption {
+    margin-top: 8px;
+    color: #435463;
+    font-size: 0.875rem;
+}
+
+@media (max-width: 640px) {
+    .dyno-steps,
+    .dyno-comparison {
+        grid-template-columns: 1fr;
+    }
+
+    .dyno-steps li {
+        display: grid;
+        grid-template-columns: minmax(80px, 104px) minmax(0, 1fr);
+        align-items: center;
+        gap: 12px;
+        padding: 12px;
+        text-align: left;
+    }
+
+    .dyno-steps img {
+        margin: 0;
+    }
+}
