@@ -19,6 +19,112 @@
 
 <h1>Changelog</h1>
 
+```html
+<section>
+    <h2>Firmware 3.2.13</h2>
+    <p><strong>Großes Funktionsupdate mit CanDisp Street Dyno, erweiterten Anzeigeseiten, Extended-CAN-Support sowie flexiblerem Settings- und Recovery-System.</strong></p>
+
+    <ul>
+        <li>
+            <strong>Anzeigeseiten auf bis zu 6 Messwerte erweitert</strong>
+            <ul>
+                <li>Neue Layouts für die gleichzeitige Darstellung mehrerer Messwerte</li>
+                <li>Messwerte können pro Screen flexibel kombiniert werden</li>
+                <li>Bestehende Einzel- und Mehrfachanzeigen bleiben weiterhin verfügbar</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Extended CAN Frames unterstützt</strong>
+            <ul>
+                <li>Unterstützung von 29-Bit-CAN-Identifiern zusätzlich zu Standard-CAN mit 11 Bit</li>
+                <li>Extended-ID-Einstellung individuell pro CAN-Signal</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>CanDisp Street Dyno hinzugefügt</strong>
+            <ul>
+                <li>Aufzeichnung von Beschleunigungsläufen anhand von Motordrehzahl und optional Fahrzeuggeschwindigkeit</li>
+                <li>Automatischer Start und Stopp anhand konfigurierbarer Start- und Ziel-Drehzahlen</li>
+                <li>Speicherung vollständiger und bei Bedarf auch unvollständiger Runs</li>
+                <li>Aufzeichnung zusätzlicher Messwerte wie TPS, MAP, Lambda, Zündung oder Temperaturen</li>
+                <li>Auswertung von Leistung und Drehmoment direkt über die CanDisp-Weboberfläche</li>
+                <li>Zusätzliches frei wählbares Diagramm für weitere aufgezeichnete Messwerte</li>
+                <li>Konfigurierbare Glättung der Auswertung</li>
+                <li>Run-Kommentare sowie Import und Export gespeicherter Dyno-Runs</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Dyno-Run-Verwaltung erweitert</strong>
+            <ul>
+                <li>Archiv für gespeicherte Messläufe</li>
+                <li>Wichtige Runs können gegen versehentliches Löschen geschützt werden</li>
+                <li>Mehrere Fahrzeugprofile mit individuellen Fahrzeug- und Übersetzungsdaten</li>
+                <li>Umgebungsdaten wie Luftdruck und Lufttemperatur können pro Auswertung hinterlegt werden</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Settings-Export und -Import erweitert</strong>
+            <ul>
+                <li>Dyno-Recorder-Einstellungen und Fahrzeugprofile können zusammen mit der CanDisp-Konfiguration gesichert werden</li>
+                <li>Größere Konfigurationen werden weiterhin vollständig unterstützt</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Selektiven Settings-Import hinzugefügt</strong>
+            <ul>
+                <li>Beim Laden einer Konfiguration kann gezielt ausgewählt werden, welche Bereiche übernommen werden sollen</li>
+                <li>Nicht ausgewählte Bereiche der vorhandenen Konfiguration bleiben unverändert</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Reset-Funktionen erweitert</strong>
+            <ul>
+                <li>Einstellungen, Dyno-Daten und Zwischenspeicher können gezielt und unabhängig voneinander zurückgesetzt werden</li>
+                <li>Der vollständige Factory Reset bleibt weiterhin verfügbar</li>
+                <li>Beim vollständigen Factory Reset werden die internen Konfigurations- und Dateispeicher vollständig neu aufgebaut</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Weboberfläche überarbeitet</strong>
+            <ul>
+                <li>Hauptmenü neu strukturiert</li>
+                <li>Neue Bereiche für Street Dyno und die erweiterten Verwaltungsfunktionen</li>
+                <li>Navigation und Bedienung auf Smartphone und Desktop weiter vereinheitlicht</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Recovery-System erweitert</strong>
+            <ul>
+                <li>Recovery-Modus zeigt seinen Status jetzt zusätzlich direkt auf dem CanDisp-Display an</li>
+                <li>Firmware-Installation, normaler Startversuch und Zurücksetzen der Einstellungen bleiben unabhängig voneinander möglich</li>
+                <li>Recovery-Modus arbeitet weiterhin unabhängig von der normalen Display-, CAN-, BLE- und Konfigurationsinitialisierung</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>NVS-Speicherprüfung verbessert</strong>
+            <ul>
+                <li>Integritätsprüfung des internen Standard-NVS beim Recovery-Start</li>
+                <li>Beschädigte Standard-NVS-Strukturen können automatisch repariert und neu initialisiert werden</li>
+                <li>Verbessertes Verhalten bei beschädigten oder unvollständigen Konfigurationsdaten</li>
+            </ul>
+        </li>
+
+        <li>
+            Zahlreiche kleinere Verbesserungen an Stabilität, Speicherverwaltung,
+            Weboberfläche und Konfigurationshandling
+        </li>
+    </ul>
+</section>
+
 <section>
     <h2>Firmware 3.2.12</h2>
     <p><strong>Umfangreiches Funktions- und Stabilitätsupdate mit Saab Trionic 7 Support, erweitertem DBC-Import, Recovery-System und verbesserter Navigation.</strong></p>
