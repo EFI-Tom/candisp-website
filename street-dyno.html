@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Mit CanDisp Street Dyno Beschleunigungsläufe aufzeichnen, Leistung und Drehmoment auswerten und gespeicherte Läufe vergleichen.">
+    <title>Street Dyno - CanDisp</title>
+    <link rel="canonical" href="https://candisp.de/street-dyno.html">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<div id="main-nav"></div>
+<script src="js/nav.js"></script>
+
+<main>
+    <header class="dyno-intro">
+        <p class="dyno-kicker">CanDisp 52</p>
+        <h1>CanDisp Street Dyno</h1>
+        <p class="dyno-lead">
+            Zeichne einen Beschleunigungslauf in einem festen Gang auf. CanDisp schätzt aus dem
+            Drehzahlverlauf und deinen Fahrzeugdaten Leistung und Drehmoment. Im Browser kannst
+            du die Kurven auswerten und mehrere Läufe vergleichen.
+        </p>
+        <a class="dyno-button" href="#vergleich">Saab-Vergleich ansehen</a>
+    </header>
+
+    <section aria-labelledby="aufzeichnung-titel">
+        <h2 id="aufzeichnung-titel">So läuft die Aufzeichnung</h2>
+        <ol class="dyno-steps" role="list">
+            <li>
+                <img src="images/street-dyno/armed.png" width="360" height="360"
+                     alt="Runde CanDisp-Anzeige im Zustand ARMED mit dem Hinweis WAIT FOR START">
+                <div>
+                    <h3>Bereit</h3>
+                    <p>Unterhalb der Startdrehzahl wartet CanDisp auf den Beginn des Laufs.</p>
+                </div>
+            </li>
+            <li>
+                <img src="images/street-dyno/recording.png" width="360" height="360"
+                     alt="Runde CanDisp-Anzeige während der Aufzeichnung mit rotem REC-Status">
+                <div>
+                    <h3>Aufnahme</h3>
+                    <p>Steigt die Drehzahl über die Startschwelle, beginnt die Aufzeichnung automatisch.</p>
+                </div>
+            </li>
+            <li>
+                <img src="images/street-dyno/finished.png" width="360" height="360"
+                     alt="Runde CanDisp-Anzeige nach der Aufzeichnung mit FINISHED und COMPLETE">
+                <div>
+                    <h3>Fertig</h3>
+                    <p>Bei anhaltend sinkender Drehzahl endet die Aufzeichnung nach einem kurzen Nachlauf.</p>
+                </div>
+            </li>
+        </ol>
+        <p>Die eingestellte Zieldrehzahl bestimmt, ob der Lauf als vollständig gilt.</p>
+    </section>
+
+    <section id="vergleich" class="dyno-comparison" aria-labelledby="vergleich-titel">
+        <div>
+            <p class="dyno-kicker">Auswertung im Browser</p>
+            <h2 id="vergleich-titel">Zwei Saab-Läufe im Vergleich</h2>
+            <p>
+                Beide Läufe liegen auf derselben Drehzahlachse. So lassen sich Leistung und
+                Drehmoment bei gleicher Motordrehzahl vergleichen.
+            </p>
+            <p>
+                Im Menü <strong>Show Dyno Curves</strong> kannst du bis zu vier gespeicherte Läufe
+                gemeinsam anzeigen. Aufgezeichnete CAN-Werte wie Lambda oder Saugrohrdruck
+                lassen sich als zusätzliche Kurven einblenden.
+            </p>
+        </div>
+        <figure>
+            <a href="images/street-dyno/saab-vergleich.png">
+                <img src="images/street-dyno/saab-vergleich.png" width="305" height="466" loading="lazy"
+                     alt="Zwei Saab-Läufe mit Leistung in PS und Drehmoment in Nm über der Motordrehzahl.">
+            </a>
+            <figcaption>Originalausschnitt aus der CanDisp-Weboberfläche</figcaption>
+        </figure>
+    </section>
+
+    <section aria-labelledby="voraussetzungen-titel">
+        <h2 id="voraussetzungen-titel">Was du für einen Lauf brauchst</h2>
+        <ul>
+            <li>Motordrehzahl als CAN-Signal. Die Fahrzeuggeschwindigkeit ist optional.</li>
+            <li>Ein Fahrzeugprofil mit Fahrzeug- und Übersetzungsdaten für die Auswertung.</li>
+            <li>Einen festen Gang während des Beschleunigungslaufs.</li>
+        </ul>
+        <p>
+            In <strong>Dyno Runs</strong> kannst du gespeicherte Läufe erneut auswerten,
+            vor dem Überschreiben schützen und als .dyn-Datei exportieren.
+        </p>
+        <p><a href="docs.html">Dokumentation</a> · <a href="downloads.html">Firmware und Downloads</a></p>
+    </section>
+</main>
+
+<footer>
+    <p>
+        © Tom Avsic Engineering |
+        <a href="impressum.html">Impressum</a>
+    </p>
+</footer>
+
+</body>
+</html>

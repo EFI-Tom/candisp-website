@@ -1,6 +1,7 @@
 document.getElementById("main-nav").innerHTML = `
 <nav>
     <a href="index.html">Home</a>
+    <a href="street-dyno.html">Street Dyno</a>
     <a href="gallery.html">Galerie</a>
     <a href="downloads.html">Downloads</a>
     <a href="docs.html">Dokumentation</a>
