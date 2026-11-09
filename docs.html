@@ -3,6 +3,7 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dokumentation - CanDisp</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -12,10 +13,14 @@
 <div id="main-nav"></div>
 <script src="js/nav.js"></script>
 
-<h1>Dokumentation</h1>
+<main class="prose">
+<header class="page-header">
+    <p class="page-kicker">CanDisp 52</p>
+    <h1>Dokumentation</h1>
+</header>
 
-    <h2>Erste Schritte</h2>
-<p>
+<h2>Erste Schritte</h2>
+<p class="notice">
     Diese Dokumentation enthält zur Zeit nur die aller ersten Schritte und Hinweise zur Inbetriebnahme. 
     Es wird dringend empfohlen die Bedienungsanleitung zu lesen, welche im 
     <a href="downloads.html">Downloadbereich</a> verfügbar ist.
@@ -36,20 +41,21 @@
         ein- und ausgeschaltet wird.
     </p>
 
-    <h3>Technische Daten</h3>
-
-    <ul>
-        <li>Versorgungsspannung: 5 V DC bis 15 V DC</li>
-        <li>Typische Leistungsaufnahme: 0.8 W</li>
-        <li>Maximale Leistungsaufnahme: 3 W</li>
-        <li>Empfohlene externe Absicherung: max. 5 A</li>
-    </ul>
+    <div class="card">
+        <h3>Technische Daten</h3>
+        <ul>
+            <li>Versorgungsspannung: 5 V DC bis 15 V DC</li>
+            <li>Typische Leistungsaufnahme: 0.8 W</li>
+            <li>Maximale Leistungsaufnahme: 3 W</li>
+            <li>Empfohlene externe Absicherung: max. 5 A</li>
+        </ul>
+    </div>
 
     <p>
         Nach dem Einschalten der Versorgungsspannung startet das Gerät automatisch.
     </p>
 
-    <p>
+    <p class="notice">
         Achtung: Eine Überschreitung des zulässigen Spannungsbereichs kann zur Beschädigung des Geräts führen.
     </p>
 
@@ -159,7 +165,7 @@
 
 </section>
 
-<section>
+<section class="card">
     <h2>Sicherheitshinweise</h2>
 
     <p>
@@ -171,6 +177,8 @@
         Der elektrische Anschluss darf nur bei abgeschalteter Versorgungsspannung erfolgen.
     </p>
 </section>
+
+</main>
 
 <footer>
     <p>

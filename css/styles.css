@@ -1,47 +1,201 @@
-nav {
-    margin-top: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #ddd;
-}
-
-nav a {
-    margin-right: 20px;
-    text-decoration: none;
-    color: inherit;
-}
-
-nav a:hover {
-    text-decoration: underline;
+:root {
+    --ink: #17212a;
+    --muted: #435463;
+    --blue: #195b87;
+    --blue-hover: #124569;
+    --orange: #f39c12;
+    --line: #dce5eb;
+    --panel: #f0f6fa;
+    --radius: 12px;
+    color-scheme: light;
+    color: var(--ink);
+    background: #fff;
 }
 
 body {
     font-family: Arial, sans-serif;
     max-width: 800px;
     margin: auto;
-    padding: 20px;
+    padding: clamp(14px, 3.5vw, 20px);
     line-height: 1.6;
 }
 
-h1, h2 {
+a {
+    color: var(--blue);
+    text-underline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--blue);
+    outline-offset: 3px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--line);
+}
+
+nav a {
+    padding-block: 3px;
+    color: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+    color: var(--blue);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+h2 {
     margin-top: 40px;
 }
 
+.page-header {
+    margin: clamp(28px, 6vw, 52px) 0 24px;
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+}
+
+.page-kicker {
+    margin: 0 0 8px;
+    color: var(--blue);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.page-lead {
+    max-width: 62ch;
+    font-size: 1.125rem;
+}
+
+.page-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 16px;
+    margin: 14px 0 0;
+}
+
+.button-primary {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: var(--blue);
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.button-primary:hover {
+    background: var(--blue-hover);
+    text-decoration: underline;
+}
+
+.card {
+    margin-top: 16px;
+    padding: clamp(14px, 4vw, 22px);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--panel);
+}
+
+.card > h2,
+.card > h3 {
+    margin: 0;
+    padding-left: 10px;
+    border-left: 3px solid var(--orange);
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+}
+
+.card > h2 {
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+}
+
+.card > p,
+.card > ul,
+.card > ol {
+    margin: 10px 0 0;
+}
+
+.card > ul,
+.card > ol {
+    padding-left: 1.25rem;
+}
+
+.card > .page-actions {
+    margin-top: 14px;
+}
+
+.card > :first-child,
+.notice > :first-child {
+    margin-top: 0;
+}
+
+.notice > :last-child {
+    margin-bottom: 0;
+}
+
+.notice {
+    padding: 12px 16px;
+    border-left: 3px solid var(--orange);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    background: var(--panel);
+}
+
+.notice > h2 {
+    font-size: 1.25rem;
+}
+
+.prose {
+    max-width: 72ch;
+}
+
 .hero {
-    margin-top: 60px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(20px, 5vw, 36px);
+}
+
+.hero h1 {
+    font-size: clamp(2.25rem, 6vw, 3.4rem);
 }
 
 .hero-image {
-    margin: 30px auto 0 auto;
-    width: 70%;
-    max-width: 700px;
-    height: auto;
     display: block;
+    width: 100%;
+    height: auto;
 }
 
-@media (max-width: 768px) {
-    .hero-image {
-        width: 100%;
+@media (max-width: 640px) {
+    .hero {
+        grid-template-columns: 1fr;
     }
+}
+
+.guide-video {
+    display: block;
+    width: min(100%, 530px);
+    height: auto;
+    aspect-ratio: 530 / 943;
+    border: 0;
+    border-radius: var(--radius);
 }
 
 .feature {
@@ -50,8 +204,10 @@ h1, h2 {
 
 footer {
     margin-top: 60px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
     font-size: 0.9em;
-    color: #666;
+    color: var(--muted);
 }
 
 .device-image {
@@ -60,23 +216,26 @@ footer {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 12px;
+    border-radius: var(--radius);
 }
 
 .gallery-scroll {
     display: flex;
     overflow-x: auto;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
     gap: 20px;
     padding-bottom: 10px;
-    margin-top: 30px;
 
     scroll-snap-type: x mandatory;
 }
 
 .gallery-scroll img {
-    width: 300px;
+    width: min(300px, 100%);
+    height: auto;
     flex-shrink: 0;
-    border-radius: 12px;
+    border-radius: var(--radius);
 
     scroll-snap-align: center;
 }
@@ -85,9 +244,10 @@ footer {
     position: relative;
     display: flex;
     align-items: center;
+    margin-top: 16px;
 }
 
-/* Die Buttons schick machen */
+/* Galerie-Navigation */
 .nav-btn {
     position: absolute;
     top: 50%;
@@ -125,81 +285,16 @@ footer {
 }
 
 /* Street Dyno */
-#main-nav nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px 18px;
-}
-
-#main-nav nav a {
-    margin-right: 0;
-    padding-block: 3px;
-    white-space: nowrap;
-}
-
 .dyno-intro {
     margin: clamp(32px, 6vw, 64px) 0 40px;
 }
 
-.dyno-kicker,
-.downloads-kicker {
-    margin: 0 0 8px;
-    color: #225d84;
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-}
-
 .dyno-intro h1 {
-    margin: 0;
     font-size: clamp(2rem, 5vw, 3rem);
-    line-height: 1.15;
 }
 
-.dyno-lead {
-    max-width: 62ch;
-    font-size: 1.125rem;
-}
-
-.dyno-button,
-.download-button {
-    display: inline-block;
-    padding: 8px 14px;
-    border-radius: 8px;
-    background: #195b87;
-    color: #fff;
-    font-weight: 700;
-    text-decoration: none;
-}
-
-.dyno-button:hover,
-.download-button:hover {
-    background: #124569;
-    text-decoration: underline;
-}
-
-.dyno-button:focus-visible,
-.download-button:focus-visible {
-    outline: 3px solid #195b87;
-    outline-offset: 3px;
-}
-
-.dyno-teaser {
-    margin-top: 32px;
-    padding: 18px 22px;
-    border-left: 4px solid #195b87;
-    border-radius: 0 12px 12px 0;
-    background: #f0f6fa;
-}
-
-.dyno-teaser h2,
 .dyno-comparison h2 {
     margin: 0;
-}
-
-.dyno-teaser p {
-    margin: 6px 0 12px;
 }
 
 .dyno-steps {
@@ -212,8 +307,8 @@ footer {
 
 .dyno-steps li {
     padding: 16px;
-    border: 1px solid #dce5eb;
-    border-radius: 12px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
     text-align: center;
 }
 
@@ -239,9 +334,9 @@ footer {
     gap: 24px;
     margin-top: 36px;
     padding: clamp(16px, 4vw, 28px);
-    border: 1px solid #dce5eb;
-    border-radius: 12px;
-    background: #f0f6fa;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--panel);
 }
 
 .dyno-comparison figure {
@@ -259,7 +354,7 @@ footer {
 
 .dyno-comparison figcaption {
     margin-top: 8px;
-    color: #435463;
+    color: var(--muted);
     font-size: 0.875rem;
 }
 
@@ -284,82 +379,7 @@ footer {
 }
 
 /* Downloads */
-.downloads-page {
-    --download-card: #f0f6fa;
-    --download-border: #dce5eb;
-    --download-muted: #435463;
-    --download-link: #195b87;
-    --download-accent: #f39c12;
-    color-scheme: light;
-    background: #fff;
-    color: #17212a;
-}
-
-.downloads-page nav {
-    border-color: var(--download-border);
-}
-
-.downloads-page footer,
 .download-note {
-    color: var(--download-muted);
-}
-
-.downloads-page footer a,
-.download-card a:not(.download-button) {
-    color: var(--download-link);
-}
-
-.downloads-header {
-    margin: clamp(28px, 6vw, 52px) 0 24px;
-}
-
-.downloads-header h1 {
-    margin: 0;
-    font-size: clamp(2rem, 5vw, 2.75rem);
-    line-height: 1.15;
-}
-
-.downloads-kicker {
-    color: var(--download-link);
-}
-
-.download-card {
-    padding: clamp(14px, 4vw, 22px);
-    border: 1px solid var(--download-border);
-    border-radius: 12px;
-    background: var(--download-card);
-}
-
-.download-card + .download-card {
-    margin-top: 16px;
-}
-
-.download-card h2 {
-    margin: 0;
-    padding-left: 10px;
-    border-left: 3px solid var(--download-accent);
-    font-size: clamp(1.2rem, 4vw, 1.5rem);
-    line-height: 1.25;
-    overflow-wrap: anywhere;
-}
-
-.download-card p {
-    margin: 10px 0 0;
-}
-
-.download-card .download-actions {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 10px 16px;
-    margin-top: 14px;
-}
-
-.download-note {
+    color: var(--muted);
     font-size: 0.925rem;
-}
-
-.download-card ul {
-    margin: 10px 0 0;
-    padding-left: 1.25rem;
 }
