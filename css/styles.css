@@ -141,7 +141,8 @@ footer {
     margin: clamp(32px, 6vw, 64px) 0 40px;
 }
 
-.dyno-kicker {
+.dyno-kicker,
+.downloads-kicker {
     margin: 0 0 8px;
     color: #225d84;
     font-size: 0.85rem;
@@ -161,7 +162,8 @@ footer {
     font-size: 1.125rem;
 }
 
-.dyno-button {
+.dyno-button,
+.download-button {
     display: inline-block;
     padding: 8px 14px;
     border-radius: 8px;
@@ -171,12 +173,14 @@ footer {
     text-decoration: none;
 }
 
-.dyno-button:hover {
+.dyno-button:hover,
+.download-button:hover {
     background: #124569;
     text-decoration: underline;
 }
 
-.dyno-button:focus-visible {
+.dyno-button:focus-visible,
+.download-button:focus-visible {
     outline: 3px solid #195b87;
     outline-offset: 3px;
 }
@@ -277,4 +281,85 @@ footer {
     .dyno-steps img {
         margin: 0;
     }
+}
+
+/* Downloads */
+.downloads-page {
+    --download-card: #f0f6fa;
+    --download-border: #dce5eb;
+    --download-muted: #435463;
+    --download-link: #195b87;
+    --download-accent: #f39c12;
+    color-scheme: light;
+    background: #fff;
+    color: #17212a;
+}
+
+.downloads-page nav {
+    border-color: var(--download-border);
+}
+
+.downloads-page footer,
+.download-note {
+    color: var(--download-muted);
+}
+
+.downloads-page footer a,
+.download-card a:not(.download-button) {
+    color: var(--download-link);
+}
+
+.downloads-header {
+    margin: clamp(28px, 6vw, 52px) 0 24px;
+}
+
+.downloads-header h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    line-height: 1.15;
+}
+
+.downloads-kicker {
+    color: var(--download-link);
+}
+
+.download-card {
+    padding: clamp(14px, 4vw, 22px);
+    border: 1px solid var(--download-border);
+    border-radius: 12px;
+    background: var(--download-card);
+}
+
+.download-card + .download-card {
+    margin-top: 16px;
+}
+
+.download-card h2 {
+    margin: 0;
+    padding-left: 10px;
+    border-left: 3px solid var(--download-accent);
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+}
+
+.download-card p {
+    margin: 10px 0 0;
+}
+
+.download-card .download-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 16px;
+    margin-top: 14px;
+}
+
+.download-note {
+    font-size: 0.925rem;
+}
+
+.download-card ul {
+    margin: 10px 0 0;
+    padding-left: 1.25rem;
 }

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" class="downloads-page">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Downloads - CanDisp</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -11,65 +12,51 @@
 <div id="main-nav"></div>
 <script src="js/nav.js"></script>
 
-<h1>Downloads</h1>
+<main>
+    <header class="downloads-header">
+        <p class="downloads-kicker">CanDisp 52</p>
+        <h1>Downloads</h1>
+    </header>
 
-<section>
-    <h2>Bedienungsanleitung</h2>
-    <p>
-        Die Bedienungsanleitung enthält Informationen zu Anschluss, Inbetriebnahme,
-        Konfiguration, Firmware-Update und sicherer Verwendung des CanDisp-Geräts.
-    </p>
-    <p>
-        <a href="downloads/CanDisp_TFT185TP_Bedienungsanleitung_Rev_C.pdf">
-            Bedienungsanleitung herunterladen (PDF)
-        </a>
-    </p>
-</section>
+    <section class="download-card">
+        <h2>Bedienungsanleitung</h2>
+        <p>
+            Die Bedienungsanleitung enthält Informationen zu Anschluss, Inbetriebnahme,
+            Konfiguration, Firmware-Update und sicherer Verwendung des CanDisp-Geräts.
+        </p>
+        <p class="download-actions">
+            <a class="download-button" href="downloads/CanDisp_TFT185TP_Bedienungsanleitung_Rev_C.pdf">
+                Bedienungsanleitung herunterladen (PDF)
+            </a>
+        </p>
+    </section>
 
-<section>
-    <h2>Firmware</h2>
-    <p>
-        Aktuelle Firmware für das CanDisp TFT1.85TP.
-        Das Update erfolgt über die Weboberfläche des Geräts.
-    </p>
-
-    <ul>
-        <li>
-            <a href="downloads/CanDisp_TFT185TP_Firmware_3.2.13.bin">
+    <section class="download-card">
+        <h2>Firmware</h2>
+        <p>
+            Aktuelle Firmware für das CanDisp TFT1.85TP.
+            Das Update erfolgt über die Weboberfläche des Geräts.
+        </p>
+        <p class="download-actions">
+            <a class="download-button" href="downloads/CanDisp_TFT185TP_Firmware_3.2.13.bin">
                 Aktuelle Firmware 3.2.13 herunterladen (.bin)
             </a>
-        </li>
-        <li>
-            <a href="changelog.html">
-                Änderungsprotokoll anzeigen
-            </a>
-        </li>
-    </ul>
+            <a href="changelog.html">Änderungsprotokoll anzeigen</a>
+        </p>
+        <p class="download-note">
+            Verwende ausschließlich Firmware, die zur Hardware-Version deines Geräts passt.
+        </p>
+    </section>
 
-    <p>
-        Wichtig: Verwende ausschließlich Firmware, die zur Hardware-Version deines Geräts passt.
-    </p>
-</section>
-<section>
-    <h2>Konfigurationsdateien</h2>
-    <p>
-        Beispielhafte Konfigurationsdateien für verschiedene Systeme.
-    </p>
-
-    <ul>
-        <li>
-            <a href="downloads/settings_MaxxECU.json">
-                settings_MaxxECU.json
-            </a>
-        </li>
-
-        <li>
-            <a href="downloads/settings_VESC.json">
-                settings_VESC.json
-            </a>
-        </li>
-    </ul>
-</section>
+    <section class="download-card">
+        <h2>Konfigurationsdateien</h2>
+        <p>Beispielhafte Konfigurationsdateien für verschiedene Systeme.</p>
+        <ul>
+            <li><a href="downloads/settings_MaxxECU.json">settings_MaxxECU.json</a></li>
+            <li><a href="downloads/settings_VESC.json">settings_VESC.json</a></li>
+        </ul>
+    </section>
+</main>
 
 <footer>
     <p>
