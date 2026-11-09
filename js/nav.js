@@ -1,5 +1,6 @@
-document.getElementById("main-nav").innerHTML = `
-<nav>
+const mainNav = document.getElementById("main-nav");
+mainNav.innerHTML = `
+<nav aria-label="Hauptnavigation">
     <a href="index.html">Home</a>
     <a href="street-dyno.html">Street Dyno</a>
     <a href="gallery.html">Galerie</a>
@@ -10,3 +11,11 @@ document.getElementById("main-nav").innerHTML = `
     <a href="impressum.html">Impressum</a>
 </nav>
 `;
+
+const currentPage = location.pathname.split("/").pop() || "index.html";
+for (const link of mainNav.querySelectorAll("a")) {
+    if (link.getAttribute("href") === currentPage) {
+        link.setAttribute("aria-current", "page");
+        break;
+    }
+}
