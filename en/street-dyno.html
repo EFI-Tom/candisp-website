@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Record acceleration runs with CanDisp Street Dyno, estimate power and torque, and compare saved runs in your browser.">
+    <title>Street Dyno - CanDisp</title>
+    <link rel="canonical" href="https://candisp.de/en/street-dyno.html">
+    <link rel="alternate" hreflang="de" href="https://candisp.de/street-dyno.html">
+    <link rel="alternate" hreflang="en" href="https://candisp.de/en/street-dyno.html">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+<div id="main-nav"></div>
+<script src="../js/nav.js"></script>
+
+<main>
+    <header class="page-header dyno-intro">
+        <p class="page-kicker">CanDisp 52</p>
+        <h1>CanDisp Street Dyno</h1>
+        <p class="page-lead">
+            Record an acceleration run in a single gear. CanDisp estimates power and torque
+            from engine speed over time and your vehicle data. View the curves and compare
+            runs in your browser.
+        </p>
+        <a class="button-primary" href="#comparison">View the Saab comparison</a>
+    </header>
+
+    <section aria-labelledby="recording-title">
+        <h2 id="recording-title">How recording works</h2>
+        <ol class="dyno-steps" role="list">
+            <li>
+                <img src="../images/street-dyno/armed.png" width="360" height="360"
+                     alt="Round CanDisp display showing ARMED and WAIT FOR START">
+                <div>
+                    <h3>Armed</h3>
+                    <p>Below the start RPM, CanDisp waits for the run to begin.</p>
+                </div>
+            </li>
+            <li>
+                <img src="../images/street-dyno/recording.png" width="360" height="360"
+                     alt="Round CanDisp display recording a run with a red REC indicator">
+                <div>
+                    <h3>Recording</h3>
+                    <p>Recording starts automatically when engine speed rises past the start threshold.</p>
+                </div>
+            </li>
+            <li>
+                <img src="../images/street-dyno/finished.png" width="360" height="360"
+                     alt="Round CanDisp display showing FINISHED and COMPLETE after a run">
+                <div>
+                    <h3>Finished</h3>
+                    <p>When engine speed falls for a sustained period, recording ends after a short delay.</p>
+                </div>
+            </li>
+        </ol>
+        <p>The target RPM determines whether a run is marked as complete.</p>
+    </section>
+
+    <section id="comparison" class="dyno-comparison" aria-labelledby="comparison-title">
+        <div>
+            <p class="page-kicker">Browser-based analysis</p>
+            <h2 id="comparison-title">Comparing two Saab runs</h2>
+            <p>
+                Both runs share the same RPM axis, so you can compare power and torque at the
+                same engine speed.
+            </p>
+            <p>
+                Use <strong>Show Dyno Curves</strong> to display up to four saved runs together.
+                Recorded CAN channels such as lambda or manifold pressure can be shown as additional curves.
+            </p>
+        </div>
+        <figure>
+            <a href="../images/street-dyno/saab-vergleich.png">
+                <img src="../images/street-dyno/saab-vergleich.png" width="305" height="466" loading="lazy"
+                     alt="Power in PS and torque in Nm versus engine speed for two Saab runs">
+            </a>
+            <figcaption>Excerpt from the CanDisp web interface</figcaption>
+        </figure>
+    </section>
+
+    <section aria-labelledby="requirements-title">
+        <h2 id="requirements-title">What you need for a run</h2>
+        <ul>
+            <li>Engine RPM as a CAN signal. Vehicle speed is optional.</li>
+            <li>A vehicle profile with vehicle and gearing data for the analysis.</li>
+            <li>A single gear throughout the acceleration run.</li>
+        </ul>
+        <p>
+            In <strong>Dyno Runs</strong>, you can analyse saved runs again, protect them from being
+            overwritten, and export them as .dyn files.
+        </p>
+        <p><a href="../docs.html" hreflang="de">Documentation (German)</a> · <a href="downloads.html">Firmware and downloads</a></p>
+    </section>
+</main>
+
+<footer>
+    <p>
+        © Tom Avsic Engineering |
+        <a href="../impressum.html" hreflang="de">Legal notice (German)</a>
+    </p>
+</footer>
+
+</body>
+</html>
