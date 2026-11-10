@@ -265,6 +265,18 @@ footer {
     margin-top: 16px;
 }
 
+.gallery-video {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 300px);
+    align-items: center;
+    gap: 16px 24px;
+    margin-top: 24px;
+}
+
+.gallery-video .guide-video {
+    max-width: 300px;
+}
+
 /* Galerie-Navigation */
 .nav-btn {
     position: absolute;
@@ -317,7 +329,7 @@ footer {
 
 .dyno-steps {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 16px;
     padding: 0;
     list-style: none;
@@ -377,6 +389,7 @@ footer {
 }
 
 @media (max-width: 640px) {
+    .gallery-video,
     .dyno-steps,
     .dyno-comparison {
         grid-template-columns: 1fr;
