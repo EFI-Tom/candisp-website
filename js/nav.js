@@ -9,12 +9,12 @@ const currentHref = currentFile === "index.html" ? homeHref : currentFile;
 const navItems = [
     [homeHref, "Home", "Home"],
     ["street-dyno.html", "Street Dyno", "Street Dyno"],
-    ["gallery.html", "Galerie"],
+    ["gallery.html", "Galerie", "Gallery"],
     ["downloads.html", "Downloads", "Downloads"],
-    ["docs.html", "Dokumentation"],
-    ["howto_blitzerdepro.html", "Blitzer.de App"],
-    ["about.html", "Die Story"],
-    ["impressum.html", "Impressum"],
+    ["docs.html", "Dokumentation", "Documentation"],
+    ["howto_blitzerdepro.html", "Blitzer.de App", "Blitzer.de PRO"],
+    ["about.html", "Die Story", "Story"],
+    ["impressum.html", "Impressum", "Legal Notice"],
 ];
 
 const siteNav = document.createElement("nav");
