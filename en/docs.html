@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Get started with CanDisp 52. Learn about power and CAN wiring, web configuration, navigation, and firmware updates.">
+    <title>Documentation - CanDisp</title>
+    <link rel="canonical" href="https://candisp.de/en/docs.html">
+    <link rel="alternate" hreflang="de" href="https://candisp.de/docs.html">
+    <link rel="alternate" hreflang="en" href="https://candisp.de/en/docs.html">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+<div id="main-nav"></div>
+<script src="../js/nav.js"></script>
+
+<main class="prose">
+<header class="page-header">
+    <p class="page-kicker">CanDisp 52</p>
+    <h1>Documentation</h1>
+</header>
+
+<h2>Getting started</h2>
+<p class="notice">
+    This page covers basic setup and first use. Read the operating manual on the
+    <a href="downloads.html">Downloads</a> page before putting CanDisp into service.
+</p>
+
+<section>
+    <h3>Power supply</h3>
+    <p>
+        Connect the black wire from CanDisp to ground (GND) and the red wire to a switched DC power supply.
+    </p>
+    <p>
+        A supply that switches on and off with the vehicle or the connected system is recommended.
+    </p>
+
+    <div class="card">
+        <h3>Technical specifications</h3>
+        <ul>
+            <li>Supply voltage: 8 to 15 V DC</li>
+            <li>Typical power consumption: 0.8 W</li>
+            <li>Maximum power consumption: 3 W</li>
+            <li>Recommended external fuse: 5 A maximum</li>
+        </ul>
+    </div>
+
+    <p>CanDisp starts automatically when you switch on the power supply.</p>
+    <p class="notice">
+        Operating outside the specified voltage range can damage the device.
+    </p>
+</section>
+
+<section>
+    <h3>CAN bus connection</h3>
+    <p>
+        Connect the white wire from CanDisp to CAN Low (CAN_L) and the green wire to CAN High (CAN_H).
+    </p>
+    <p>
+        In listen-only mode, CanDisp receives CAN messages passively and leaves the operation of existing control units undisturbed.
+    </p>
+
+    <h3>CAN settings</h3>
+    <ul>
+        <li>Set the CAN bus bit rate in the web interface.</li>
+        <li>CanDisp supports standard and extended CAN identifiers.</li>
+        <li>The internal 120-ohm split termination can be enabled when needed.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Configuration</h2>
+    <p>CanDisp provides its own Wi-Fi access point for configuration.</p>
+    <p>
+        Connect to the device's Wi-Fi network, then open its configuration interface in your web browser.
+    </p>
+    <p>The web interface lets you configure or manage:</p>
+    <ul>
+        <li>CAN bus bit rate</li>
+        <li>Signal definitions</li>
+        <li>Display and screen layout settings</li>
+        <li>Display brightness</li>
+        <li>DBC import</li>
+        <li>Firmware updates</li>
+    </ul>
+    <p>See the operating manual for more details.</p>
+
+    <img class="device-image"
+         src="../images/docs/webinterface.png"
+         alt="CanDisp web interface">
+</section>
+
+<section>
+    <h2>Navigation</h2>
+    <p>
+        CanDisp displays turn-by-turn directions sent by the CanDispNav Android app over Bluetooth Low Energy (BLE).
+    </p>
+    <p>
+        The app reads directions from Google Maps and sends the turn arrow, street names, and distance
+        to the next turn to CanDisp.
+    </p>
+    <p>
+        <a href="https://play.google.com/store/apps/details?id=com.candisp.candispnav">
+            Open CanDispNav on Google Play
+        </a>
+    </p>
+    <p>See the operating manual for more details.</p>
+
+    <img class="device-image"
+         src="../images/docs/CanDisp_Nav.png"
+         alt="CanDisp turn-by-turn navigation display">
+</section>
+
+<section>
+    <h2>Firmware updates</h2>
+    <p>Use the device's built-in web interface to update its firmware.</p>
+    <p>Find the latest firmware on the <a href="downloads.html">Downloads</a> page.</p>
+</section>
+
+<section class="card">
+    <h2>Safety information</h2>
+    <p>Use the device only in suitable low-voltage systems and CAN bus networks.</p>
+    <p>Switch off the power supply before wiring the device.</p>
+</section>
+
+</main>
+
+<footer>
+    <p>
+        © Tom Avsic Engineering |
+        <a href="impressum.html">Legal notice</a>
+    </p>
+</footer>
+
+</body>
+</html>

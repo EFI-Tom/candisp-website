@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Firmware release notes for CanDisp, including Street Dyno, Saab Trionic 7 support, and DBC import improvements.">
+    <title>Changelog - CanDisp</title>
+    <link rel="canonical" href="https://candisp.de/en/changelog.html">
+    <link rel="alternate" hreflang="de" href="https://candisp.de/changelog.html">
+    <link rel="alternate" hreflang="en" href="https://candisp.de/en/changelog.html">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+<div id="main-nav"></div>
+<script src="../js/nav.js"></script>
+
+<main>
+<header class="page-header">
+    <p class="page-kicker">CanDisp 52</p>
+    <h1>Changelog</h1>
+    <p><a href="downloads.html">Back to downloads</a></p>
+</header>
+
+<section class="card">
+    <h2>Firmware 3.2.13</h2>
+    <p><strong>Major feature update with CanDisp Street Dyno, expanded screen layouts, extended CAN support, and more flexible settings and recovery options.</strong></p>
+
+    <ul>
+        <li>
+            <strong>Up to six readings per display screen</strong>
+            <ul>
+                <li>New layouts for showing several readings at once</li>
+                <li>Flexible combinations of readings on each screen</li>
+                <li>Support for the existing single-value and multi-value layouts</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Extended CAN frame support</strong>
+            <ul>
+                <li>Support for 29-bit extended CAN identifiers in addition to standard 11-bit identifiers</li>
+                <li>Set the extended ID option separately for each CAN signal</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Added <a href="street-dyno.html">CanDisp Street Dyno</a></strong>
+            <ul>
+                <li>Record acceleration runs from engine RPM and optional vehicle speed</li>
+                <li>Recording starts when RPM crosses the start threshold from below and ends after a sustained drop followed by a short period of additional recording</li>
+                <li>The configured target RPM determines whether a run is marked as complete</li>
+                <li>Save complete runs and, when needed, incomplete runs</li>
+                <li>Record additional readings such as TPS, MAP, lambda, ignition timing, or temperatures</li>
+                <li>Analyse power and torque directly in the CanDisp web interface</li>
+                <li>Choose other recorded readings to display in an additional chart</li>
+                <li>Adjust the amount of smoothing used in the analysis</li>
+                <li>Add run comments and import or export saved Dyno runs</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Expanded Dyno run management</strong>
+            <ul>
+                <li>Archive recorded runs</li>
+                <li>Protect important runs from accidental deletion</li>
+                <li>Create multiple vehicle profiles with individual vehicle and gearing data</li>
+                <li>Enter ambient data such as air pressure and air temperature for each analysis</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Expanded settings export and import</strong>
+            <ul>
+                <li>Back up Dyno recorder settings and vehicle profiles together with the CanDisp configuration</li>
+                <li>Full support for larger configurations</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Selective settings import</strong>
+            <ul>
+                <li>Choose which sections to import when loading a configuration</li>
+                <li>The import only applies to the selected sections</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Expanded reset options</strong>
+            <ul>
+                <li>Reset settings, Dyno data, and caches independently</li>
+                <li>Option to perform a full factory reset</li>
+                <li>A full factory reset rebuilds the internal configuration and file storage</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Redesigned web interface</strong>
+            <ul>
+                <li>Reorganized main menu</li>
+                <li>New sections for Street Dyno and the expanded management features</li>
+                <li>More consistent navigation and controls on phones and desktop computers</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Expanded recovery system</strong>
+            <ul>
+                <li>Recovery mode now also shows its status directly on the CanDisp display</li>
+                <li>Independent options to install firmware, try a normal boot, or reset settings</li>
+                <li>Recovery mode runs independently of normal display, CAN, BLE, and configuration initialization</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Improved NVS integrity checks</strong>
+            <ul>
+                <li>Checks the internal standard NVS when recovery starts</li>
+                <li>Automatically repairs and reinitializes damaged standard NVS structures when possible</li>
+                <li>Improved handling of damaged or incomplete configuration data</li>
+            </ul>
+        </li>
+
+        <li>Smaller improvements to stability, memory management, the web interface, and configuration handling</li>
+    </ul>
+</section>
+
+<section class="card">
+    <h2>Firmware 3.2.12</h2>
+    <p><strong>Feature and stability update with Saab Trionic 7 support, expanded DBC import, a recovery system, and improved navigation.</strong></p>
+
+    <ul>
+        <li>
+            <strong>Added Saab Trionic 7 support</strong>
+            <ul>
+                <li>Direct diagnostic communication with Trionic 7 ECUs</li>
+                <li>Read the ECU symbol catalog and select internal T7 measurements</li>
+                <li>Assign T7 readings to CanDisp signal slots</li>
+                <li>Protect saved T7 configurations when the ECU software version differs</li>
+            </ul>
+        </li>
+
+        <li>Expanded the number of configurable signals from <strong>16 to 60</strong></li>
+
+        <li>
+            <strong>Reworked DBC import</strong>
+            <ul>
+                <li>Improved signal list and search</li>
+                <li>Filter supported and unsupported signals</li>
+                <li>Assign imported signals to any of the 60 CanDisp signal slots</li>
+                <li>Improved handling of larger DBC files</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Added the recovery system</strong>
+            <ul>
+                <li>BootGuard detects repeated failed boot attempts</li>
+                <li>Standalone minimal recovery mode with its own Wi-Fi network</li>
+                <li>Reinstall firmware even when the main firmware fails to boot fully</li>
+                <li>Try a normal boot or reset settings directly from recovery mode</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Improved firmware updates over Wi-Fi</strong>
+            <ul>
+                <li>More robust handling during uploads and restarts</li>
+                <li>Option to downgrade to an older firmware version</li>
+                <li>Improved LVGL handling during updates</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Reworked the web interface</strong>
+            <ul>
+                <li>Clearer, more consistent layout</li>
+                <li>Collapsible settings sections</li>
+                <li>Search, filter, and expand or collapse controls for large configurations</li>
+                <li>Improved operation on phones</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Improved Wi-Fi and captive portal behavior</strong>
+            <ul>
+                <li>Wi-Fi stays active while a client device is connected</li>
+                <li>Improved simultaneous use of Wi-Fi and BLE</li>
+                <li>The configuration interface can also be opened at <strong>http://candisp.local/</strong></li>
+                <li>More reliable behavior on phones and desktop computers</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Expanded navigation support</strong>
+            <ul>
+                <li>Support for <strong>OsmAnd</strong> through the CanDisp Navigation app</li>
+                <li>Continued support for Google Maps</li>
+                <li>Support for routes planned or imported in OsmAnd</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Added Blitzer.de PRO alerts</strong>
+            <ul>
+                <li>Alerts can appear as a temporary overlay on CanDisp</li>
+                <li>Automatically returns to the previous screen when the alert ends</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Improved Bluetooth reliability</strong>
+            <ul>
+                <li>Switched the BLE stack to NimBLE</li>
+                <li>Improved connection and reconnection logic</li>
+                <li>More stable simultaneous operation with Wi-Fi</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Reworked ESP-NOW</strong>
+            <ul>
+                <li>More stable operation with the Wi-Fi stack continuously available</li>
+                <li>Updated transmission for configurations with up to 60 signals</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Improved settings storage and import</strong>
+            <ul>
+                <li>More reliable handling of larger configurations</li>
+                <li>Improved saving and restoring of the expanded set of signals</li>
+                <li>Configuration files include T7 mappings</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Updated touch brightness controls</strong>
+            <ul>
+                <li>Long-press the upper or lower part of the display to adjust brightness</li>
+                <li>Support for the existing external button controls</li>
+            </ul>
+        </li>
+
+        <li>Standardized and improved internal LVGL thread safety</li>
+
+        <li>Improved reset and restart reliability</li>
+
+        <li>Added support for more CanDisp display variants based on the <strong>Waveshare 1.28-inch</strong> and <strong>Seeed 0.70-inch</strong> displays</li>
+    </ul>
+</section>
+
+<section class="card">
+    <h2>Firmware 3.2.11</h2>
+    <p><strong>First public release for CanDisp TFT1.85TP.</strong></p>
+
+    <ul>
+        <li>Displays CAN bus data on up to 16 configurable screens</li>
+
+        <li>Web-based configuration through a built-in Wi-Fi access point</li>
+
+        <li>DBC import and manual CAN signal definitions</li>
+
+        <li>Google Maps turn-by-turn directions via BLE and the CanDisp Navigation app</li>
+
+        <li>Adjustable display brightness via touch, buttons, and the dimmer input</li>
+
+        <li>Adjustable brightness curve for variable dimming signals</li>
+
+        <li>Switchable 120-ohm split termination</li>
+
+        <li>Configurable CAN bus bit rate and CAN mode</li>
+
+        <li>Firmware updates through the web interface</li>
+    </ul>
+</section>
+</main>
+
+<footer>
+    <p>
+        © Tom Avsic Engineering |
+        <a href="impressum.html">Legal notice</a>
+    </p>
+</footer>
+
+</body>
+</html>
