@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Connect CanDisp 52 to MaxxECU, enable CAN output in MTune, and load the JSON preset to display live RPM, lambda, and other engine data.">
+    <title>Set up a CAN bus display for MaxxECU | CanDisp 52</title>
+    <link rel="canonical" href="https://candisp.de/en/maxxecu.html">
+    <link rel="alternate" hreflang="de" href="https://candisp.de/maxxecu.html">
+    <link rel="alternate" hreflang="en" href="https://candisp.de/en/maxxecu.html">
+    <link rel="icon" type="image/png" sizes="64x64" href="../favicon.png">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+<div id="main-nav"></div>
+<script src="../js/nav.js"></script>
+
+<main>
+    <header class="page-header hero">
+        <div>
+            <h1>CAN bus display for MaxxECU</h1>
+            <p class="page-lead">Use CanDisp 52 to view live RPM, lambda, and other MaxxECU data. The JSON preset includes CAN signal definitions and example display screens.</p>
+            <p class="page-actions">
+                <a class="button-primary" href="../downloads/settings_MaxxECU.json" download>Download the MaxxECU preset</a>
+                <a href="#setup">Go to setup</a>
+            </p>
+        </div>
+        <img class="device-image" src="../images/gallery/CanDisp_Gauge1.png" width="430" height="430"
+             alt="CanDisp screen showing lambda correction and engine speed">
+    </header>
+
+    <section class="card" id="setup" aria-labelledby="setup-title">
+        <h2 id="setup-title">Setup in three steps</h2>
+        <ol>
+            <li>
+                <h3>Connect CanDisp</h3>
+                <p>Connect CAN-H, CAN-L, and power as described in the <a href="docs.html#can-bus-connection">CanDisp wiring guide</a>. Match the CanDisp bit rate to the bus you are using. MaxxECU specifies <strong>500 kbit/s</strong> for its default CAN output.</p>
+            </li>
+            <li>
+                <h3>Configure CAN output in MTune</h3>
+                <p>In <strong>CAN Protocols</strong>, set <strong>Generic CAN output protocol</strong> to <strong>MaxxECU Default 1.3</strong>. If your MaxxECU has multiple CAN buses, select the bus that CanDisp is connected to. The preset uses the standard IDs with a <strong>CAN ID OFFSET</strong> of <code>0</code>.</p>
+                <p>For applications with VAG DSG, MaxxECU recommends <strong>Default 1.2</strong> because CAN ID <code>0x540</code> overlaps. RPM and lambda are also available with version 1.2.
+                    <a href="https://www.maxxecu.com/webhelp/can-default_maxxecu_protocol.html">MaxxECU CAN output documentation</a>
+                </p>
+            </li>
+            <li>
+                <h3>Load the preset in CanDisp</h3>
+                <p>Connect to the CanDisp Wi-Fi network, open the web interface, and save a JSON backup of your current settings. Then use the settings import to load <code>settings_MaxxECU.json</code>. Select an included screen and check the RPM reading with the engine running and the vehicle stationary.</p>
+            </li>
+        </ol>
+    </section>
+
+    <section class="card">
+        <h2>If readings are missing</h2>
+        <p>In the default output, CAN ID <code>0x520</code> carries RPM, throttle position, manifold pressure, and lambda. If RPM is missing, check the CAN connection, bit rate, output protocol, and ID offset. Other readings depend on the sensors and settings in your MaxxECU.</p>
+        <p>If MaxxECU and CanDisp are the only devices on the bus, select <strong>Normal</strong> CAN mode on CanDisp so it can acknowledge received messages.</p>
+        <p>For custom CAN output, edit the signal definitions in the CanDisp web interface or import a matching DBC file.</p>
+    </section>
+
+    <section class="card">
+        <h2>From a Vespa project to CanDisp</h2>
+        <p>CanDisp began with a modified Vespa running MaxxECU fuel injection. I needed a round display for its engine data. The current CanDisp 52 is designed for use in a protected vehicle interior.</p>
+        <p class="page-actions">
+            <a href="about.html">The story behind CanDisp</a>
+            <a href="street-dyno.html">Analyse runs with Street Dyno</a>
+        </p>
+    </section>
+</main>
+
+<footer>
+    <p>
+        © Tom Avsic Engineering |
+        <a href="impressum.html">Legal notice</a>
+    </p>
+</footer>
+
+</body>
+</html>

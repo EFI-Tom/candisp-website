@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="CanDisp 52 mit MaxxECU verbinden, die CAN-Ausgabe in MTune einstellen und die JSON-Vorlage für Drehzahl, Lambda und weitere Motordaten laden.">
+    <title>CAN-Bus-Display für MaxxECU einrichten | CanDisp 52</title>
+    <link rel="canonical" href="https://candisp.de/maxxecu.html">
+    <link rel="alternate" hreflang="de" href="https://candisp.de/maxxecu.html">
+    <link rel="alternate" hreflang="en" href="https://candisp.de/en/maxxecu.html">
+    <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<div id="main-nav"></div>
+<script src="js/nav.js"></script>
+
+<main>
+    <header class="page-header hero">
+        <div>
+            <h1>CAN-Bus-Display für MaxxECU</h1>
+            <p class="page-lead">Mit CanDisp 52 siehst du Drehzahl, Lambda und weitere MaxxECU-Daten live. Die JSON-Vorlage bringt CAN-Signaldefinitionen und vorbereitete Anzeigen mit.</p>
+            <p class="page-actions">
+                <a class="button-primary" href="downloads/settings_MaxxECU.json" download>MaxxECU-Vorlage herunterladen</a>
+                <a href="#einrichtung">Zur Einrichtung</a>
+            </p>
+        </div>
+        <img class="device-image" src="images/gallery/CanDisp_Gauge1.png" width="430" height="430"
+             alt="CanDisp-Ansicht mit Lambdakorrektur und Motordrehzahl">
+    </header>
+
+    <section class="card" id="einrichtung" aria-labelledby="setup-title">
+        <h2 id="setup-title">Einrichtung in drei Schritten</h2>
+        <ol>
+            <li>
+                <h3>CanDisp anschließen</h3>
+                <p>Verbinde CAN-H, CAN-L und die Spannungsversorgung gemäß der <a href="docs.html#can-bus-anschluss">CanDisp-Anschlussanleitung</a>. Stelle am CanDisp die Bitrate des verwendeten Busses ein. MaxxECU dokumentiert den Standarddatenstrom für <strong>500 kbit/s</strong>.</p>
+            </li>
+            <li>
+                <h3>CAN-Ausgabe in MTune einstellen</h3>
+                <p>Wähle unter <strong>CAN Protocols</strong> beim <strong>Generic CAN output protocol</strong> die Option <strong>MaxxECU Default 1.3</strong>. Wenn deine MaxxECU mehrere CAN-Busse hat, wähle den Bus, an dem das CanDisp hängt. Die Vorlage verwendet die Standard-IDs mit <strong>CAN ID OFFSET</strong> <code>0</code>.</p>
+                <p>Für Anwendungen mit VAG-DSG empfiehlt MaxxECU <strong>Default 1.2</strong>, weil sich dort die CAN-ID <code>0x540</code> überschneidet. Drehzahl und Lambda sind auch im Datenstrom 1.2 enthalten.
+                    <a href="https://www.maxxecu.com/webhelp/can-default_maxxecu_protocol.html">MaxxECU-Dokumentation zur CAN-Ausgabe</a>
+                </p>
+            </li>
+            <li>
+                <h3>Vorlage im CanDisp laden</h3>
+                <p>Öffne die CanDisp-Weboberfläche über das WLAN des Geräts und sichere deine bisherige Konfiguration als JSON. Lade anschließend <code>settings_MaxxECU.json</code> über die Funktion zum Laden von Einstellungen. Wähle eine der mitgelieferten Anzeigen und prüfe bei laufendem Motor im Stand zuerst die Drehzahl.</p>
+            </li>
+        </ol>
+    </section>
+
+    <section class="card">
+        <h2>Wenn Werte fehlen</h2>
+        <p>Im Standarddatenstrom enthält die CAN-ID <code>0x520</code> Drehzahl, Drosselklappenstellung, Saugrohrdruck und Lambda. Fehlt die Drehzahl, prüfe CAN-Anschluss, Bitrate, Ausgabeprotokoll und ID-Offset. Welche weiteren Werte verfügbar sind, hängt von den Sensoren und Einstellungen deiner MaxxECU ab.</p>
+        <p>Sind MaxxECU und CanDisp die einzigen Teilnehmer auf dem Bus, verwende am CanDisp den CAN-Modus <strong>Normal</strong>. Damit kann CanDisp den Empfang der CAN-Nachrichten quittieren.</p>
+        <p>Für eigene CAN-Ausgaben kannst du die Signaldefinitionen in der CanDisp-Weboberfläche anpassen oder eine passende DBC-Datei importieren.</p>
+    </section>
+
+    <section class="card">
+        <h2>Vom Vespa-Projekt zum CanDisp</h2>
+        <p>Die Idee für CanDisp entstand bei einer umgebauten Vespa mit MaxxECU-Einspritzung. Für diesen Aufbau brauchte ich eine runde Anzeige für die Motordaten. Das heutige CanDisp 52 ist für den geschützten Innenraum vorgesehen.</p>
+        <p class="page-actions">
+            <a href="about.html">Die Story zum CanDisp</a>
+            <a href="street-dyno.html">Läufe mit Street Dyno auswerten</a>
+        </p>
+    </section>
+</main>
+
+<footer>
+    <p>
+        © Tom Avsic Engineering |
+        <a href="impressum.html">Impressum</a>
+    </p>
+</footer>
+
+</body>
+</html>
