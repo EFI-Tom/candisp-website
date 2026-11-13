@@ -20,6 +20,11 @@ body {
     line-height: 1.6;
 }
 
+p code {
+    font-family: Consolas, "Liberation Mono", monospace;
+    font-size: inherit;
+}
+
 a {
     color: var(--blue);
     text-underline-offset: 2px;
