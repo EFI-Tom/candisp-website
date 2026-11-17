@@ -200,6 +200,30 @@ h2 {
     font-size: clamp(2.25rem, 6vw, 3.4rem);
 }
 
+.hero-photo {
+    margin: 0;
+    max-width: 360px;
+    justify-self: center;
+}
+
+.hero-photo .hero-image {
+    border-radius: var(--radius);
+}
+
+.hero-photo figcaption,
+.purchase-note {
+    color: var(--muted);
+    font-size: 0.875rem;
+}
+
+.hero-photo figcaption {
+    margin-top: 6px;
+}
+
+.purchase-note {
+    margin-top: 8px;
+}
+
 .hero-image {
     display: block;
     width: 100%;
