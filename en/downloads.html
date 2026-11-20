@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Download the CanDisp TFT1.85TP operating manual, firmware, and example configurations.">
-    <title>Downloads - CanDisp</title>
+    <meta name="description" content="Download CanDisp 52 firmware, manual and CAN profiles for MaxxECU, ECUMaster EMU Black V2, Haltech Elite / Nexus and rusEFI, with matching CAN settings.">
+    <title>Downloads and CAN profiles | CanDisp 52</title>
     <link rel="canonical" href="https://candisp.de/en/downloads.html">
     <link rel="alternate" hreflang="de" href="https://candisp.de/downloads.html">
     <link rel="alternate" hreflang="en" href="https://candisp.de/en/downloads.html">
@@ -21,6 +21,8 @@
     <header class="page-header">
         <p class="page-kicker">CanDisp 52</p>
         <h1>Downloads</h1>
+        <p class="page-lead">Manual, firmware and ready-to-use CAN profiles for CanDisp 52.</p>
+        <p class="page-actions"><a href="#can-profile">CAN profiles for engine control units</a></p>
     </header>
 
     <section class="card">
@@ -53,13 +55,56 @@
         </p>
     </section>
 
+    <section class="card" id="can-profile" aria-labelledby="can-profile-title">
+        <h2 id="can-profile-title">CAN profiles for engine control units</h2>
+        <p>These ready-to-use JSON settings files contain up to 60 configured CAN signals, including identifiers, bit positions, data types and scaling, as well as display settings, screen layouts and the regular CanDisp special screens. Load the matching file using the settings import in the CanDisp Wi-Fi interface.</p>
+        <table class="can-profiles" role="table" aria-labelledby="can-profile-title">
+            <thead><tr><th scope="col">ECU</th><th scope="col">CAN bit rate</th><th scope="col">CAN ID type</th><th scope="col">ECU configuration</th><th scope="col">JSON download</th></tr></thead>
+            <tbody>
+                <tr>
+                    <th scope="row" data-label="ECU">MaxxECU <a class="profile-guide" href="maxxecu.html">Setup guide</a></th>
+                    <td data-label="CAN bit rate">500 kbit/s</td>
+                    <td data-label="CAN ID type">11-bit</td>
+                    <td data-label="ECU configuration">Default CAN Output V1.3, ID offset 0</td>
+                    <td data-label="JSON download"><a class="button-primary" href="../downloads/settings_MaxxECU.json" download aria-label="MaxxECU: Download JSON">Download JSON</a></td>
+                </tr>
+                <tr>
+                    <th scope="row" data-label="ECU">ECUMaster EMU Black V2</th>
+                    <td data-label="CAN bit rate">1 Mbit/s</td>
+                    <td data-label="CAN ID type">11-bit</td>
+                    <td data-label="ECU configuration">Standard EMU CAN Stream, base ID 0x600</td>
+                    <td data-label="JSON download"><a class="button-primary" href="../downloads/CanDisp_EMU_Black_V2_Settings.json" download aria-label="ECUMaster EMU Black V2: Download JSON">Download JSON</a></td>
+                </tr>
+                <tr>
+                    <th scope="row" data-label="ECU">Haltech Elite / Nexus</th>
+                    <td data-label="CAN bit rate">1 Mbit/s</td>
+                    <td data-label="CAN ID type">11-bit</td>
+                    <td data-label="ECU configuration">ECU Broadcast Protocol V2</td>
+                    <td data-label="JSON download"><a class="button-primary" href="../downloads/CanDisp_Haltech_Elite_Nexus_Broadcast_v2_Settings.json" download aria-label="Haltech Elite / Nexus: Download JSON">Download JSON</a></td>
+                </tr>
+                <tr>
+                    <th scope="row" data-label="ECU">rusEFI</th>
+                    <td data-label="CAN bit rate">500 kbit/s</td>
+                    <td data-label="CAN ID type">11-bit</td>
+                    <td data-label="ECU configuration">Native Verbose CAN Broadcast, base ID 0x200</td>
+                    <td data-label="JSON download"><a class="button-primary" href="../downloads/CanDisp_rusEFI_Verbose_0x200_Settings.json" download aria-label="rusEFI: Download JSON">Download JSON</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="profile-notes">
+            <h3>CAN settings</h3>
+            <p>The CAN bit rate is not imported from the JSON file. Set it separately in CanDisp. The table lists the intended bit rates for these profiles. Some ECUs allow other bit rates; adjust CanDisp to match.</p>
+            <h3>Engine control unit</h3>
+            <p>Enable the matching CAN output protocol in your ECU. The bit rate, CAN identifiers and protocol version must match the selected profile.</p>
+            <h3>Compatibility</h3>
+            <p>The profiles are based on the manufacturers' published CAN protocols. Signal mappings and scaling have been checked; practical testing with every listed ECU has not yet been completed.</p>
+        </div>
+        <p>These profiles process regularly broadcast CAN messages. The separate <a href="saab-trionic-7.html">Saab Trionic 7 connection</a> actively requests additional diagnostic readings over KWP.</p>
+    </section>
+
     <section class="card">
-        <h2>Configuration files</h2>
-        <p>Example configurations for different systems.</p>
-        <ul>
-            <li><a href="../downloads/settings_MaxxECU.json">settings_MaxxECU.json</a> (<a href="maxxecu.html">MaxxECU setup guide</a>)</li>
-            <li><a href="../downloads/settings_VESC.json">settings_VESC.json</a></li>
-        </ul>
+        <h2>Other configuration files</h2>
+        <p><a href="../downloads/settings_VESC.json" download>settings_VESC.json</a></p>
     </section>
 </main>
 

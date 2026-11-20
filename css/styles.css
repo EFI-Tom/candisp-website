@@ -439,6 +439,84 @@ footer {
 }
 
 /* Downloads */
+.can-profiles {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.can-profiles th,
+.can-profiles td {
+    padding: 12px 8px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+    overflow-wrap: anywhere;
+}
+
+.can-profiles thead th {
+    color: var(--muted);
+    font-size: 0.875rem;
+}
+
+.can-profiles .button-primary {
+    white-space: nowrap;
+    font-size: 0.875rem;
+}
+
+.profile-guide {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.profile-notes h3 {
+    margin: 20px 0 4px;
+    font-size: 1rem;
+}
+
+.profile-notes p {
+    margin: 0;
+}
+
+@media (max-width: 640px) {
+    .can-profiles,
+    .can-profiles tbody {
+        display: block;
+    }
+
+    .can-profiles thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+    }
+
+    .can-profiles tr {
+        display: block;
+        margin-top: 12px;
+        padding: 12px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+    }
+
+    .can-profiles th,
+    .can-profiles td {
+        display: block;
+        padding: 6px 0;
+        border: 0;
+    }
+
+    .can-profiles td::before {
+        content: attr(data-label);
+        display: block;
+        color: var(--muted);
+        font-size: 0.875rem;
+    }
+}
+
 .download-note {
     color: var(--muted);
     font-size: 0.925rem;
