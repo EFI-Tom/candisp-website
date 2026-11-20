@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="CanDisp 52 is a compact CAN bus display for live vehicle data, turn-by-turn navigation, and Street Dyno analysis.">
+    <meta name="description" content="Round CAN bus display for live vehicle data with MaxxECU presets, Saab Trionic 7 support, DBC import, navigation and Street Dyno.">
     <title>CanDisp 52 - CAN Bus Display</title>
     <link rel="canonical" href="https://candisp.de/en/">
     <link rel="alternate" hreflang="de" href="https://candisp.de/">
@@ -35,6 +35,12 @@
 </header>
 
 <section class="card">
+    <h2>Saab Trionic 7</h2>
+    <p>Read additional engine data directly from the T7 ECU and show it on your display screens. Tested in a Saab 9-5, with automatic ECU detection and signal selection over Wi-Fi.</p>
+    <p class="page-actions"><a class="button-primary" href="saab-trionic-7.html">Explore Saab T7 support</a></p>
+</section>
+
+<section class="card">
     <h2>CanDisp Street Dyno</h2>
     <p>Record acceleration runs and compare power and torque in your browser.</p>
     <p class="page-actions"><a class="button-primary" href="street-dyno.html">Explore Street Dyno</a></p>
@@ -52,6 +58,7 @@
     <h2>Features</h2>
     <ul>
         <li class="feature">Real-time CAN data display</li>
+        <li class="feature"><a href="saab-trionic-7.html">Saab Trionic 7 with active requests for additional engine data</a></li>
         <li class="feature">1.85-inch round display, readable in sunlight</li>
         <li class="feature">16 configurable display screens</li>
         <li class="feature">Turn-by-turn navigation via BLE</li>
@@ -61,9 +68,9 @@
 </section>
 
 <section>
-    <h2>Listen-only CAN</h2>
+    <h2>CAN reception and T7 requests</h2>
     <p>
-        In listen-only mode, CanDisp receives CAN messages without transmitting them.
+        In listen-only mode, CanDisp passively receives regular CAN messages. The T7 connection actively requests additional readings through diagnostic communication.
     </p>
 </section>
 

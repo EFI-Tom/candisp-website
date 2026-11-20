@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="CanDisp 52 reads additional engine data directly from Saab Trionic 7. Live display, OpenSID signal selection and Wi-Fi configuration, tested in a Saab 9-5.">
+    <title>Saab 9-5 Trionic 7 Display – Engine Data with CanDisp 52</title>
+    <link rel="canonical" href="https://candisp.de/en/saab-trionic-7.html">
+    <link rel="alternate" hreflang="de" href="https://candisp.de/saab-trionic-7.html">
+    <link rel="alternate" hreflang="en" href="https://candisp.de/en/saab-trionic-7.html">
+    <link rel="icon" type="image/png" sizes="64x64" href="../favicon.png">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+<div id="main-nav"></div>
+<script src="../js/nav.js"></script>
+
+<main>
+    <header class="page-header">
+        <p class="page-kicker">CanDisp 52</p>
+        <h1>Saab Trionic 7 – engine data directly from the ECU</h1>
+        <p class="page-lead">CanDisp 52 communicates with the Trionic 7 engine control unit and shows additional internal engine data on its configurable 52 mm round display.</p>
+        <p>The T7 connection has been successfully tested in a Saab 9-5 and is undergoing final testing. Selected, tested BioPower software versions are also supported.</p>
+        <p class="page-actions">
+            <a class="button-primary" href="#signal-selection">How to select your readings</a>
+            <a href="gallery.html">Photos and video</a>
+        </p>
+    </header>
+
+    <section class="card">
+        <h2>More engine data on your display</h2>
+        <p>Alongside the CAN messages the ECU sends regularly, CanDisp can request additional readings directly from Trionic 7. For example, you can display requested and measured air mass side by side. You choose which available readings appear on your screens.</p>
+        <ul>
+            <li>Additional internal T7 readings displayed as live data.</li>
+            <li>Automatic detection of the ECU and its software version.</li>
+            <li>Available signals matched to the detected ECU software.</li>
+            <li>Familiar OpenSID signals with readable names.</li>
+            <li>Individual signal assignments through the Wi-Fi configuration menu.</li>
+        </ul>
+    </section>
+
+    <section class="card" id="signal-selection">
+        <h2>Select readings and display live data</h2>
+        <ol>
+            <li>
+                <h3>Detect the ECU</h3>
+                <p>Once connected, CanDisp identifies the Trionic 7 ECU and its software version. It automatically reads the available symbol information from the ECU. This information identifies the internal readings for that particular software version.</p>
+            </li>
+            <li>
+                <h3>Choose your signals</h3>
+                <p>Connect to the CanDisp Wi-Fi network and open its configuration interface. Select the T7 signals you want and assign them to your display screens. Familiar OpenSID names help you identify the readings.</p>
+            </li>
+            <li>
+                <h3>Read live data</h3>
+                <p>CanDisp cyclically requests the selected readings and displays them directly. Communication takes place between the display and ECU. A permanently connected PC or additional programs such as T7Suite or TxLogger are not required for the live display.</p>
+            </li>
+        </ol>
+    </section>
+
+    <section class="card">
+        <h2>Matched to the ECU software</h2>
+        <p>CanDisp matches the signal selection to the detected ECU software. After a software change, it detects signal assignments that no longer match and stops using those outdated assignments.</p>
+        <p>Known signals with readable names are also available for selected, tested BioPower versions. The available readings depend on the ECU software. If an uncommon version needs additional adjustments, we can investigate it together.</p>
+        <p>CanDisp requests the readings using the KWP diagnostic protocol over CAN. Symbol information identifies the ECU's internal readings.</p>
+    </section>
+
+    <section class="gallery-video" aria-labelledby="saab-video-title">
+        <div>
+            <h2 id="saab-video-title">CanDisp in a Saab 9-5</h2>
+            <p>The video first shows requested and measured air mass, then switches to the speeds of all four wheels. It demonstrates how different vehicle data can be presented on configurable display screens.</p>
+            <p><a href="https://www.youtube.com/shorts/NH-GL6S2dgY">Watch on YouTube</a></p>
+        </div>
+        <iframe class="guide-video" width="300" height="533"
+                src="https://www.youtube-nocookie.com/embed/NH-GL6S2dgY"
+                title="CanDisp in a Saab 9-5" loading="lazy"
+                allow="encrypted-media; picture-in-picture"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+
+    <section class="card">
+        <h2>Questions about your T7 software version?</h2>
+        <p>For help with configuration, contact candisp [at] posteo [dot] de.</p>
+        <p class="page-actions">
+            <a href="docs.html">Documentation</a>
+            <a href="street-dyno.html">Street Dyno in the Saab</a>
+        </p>
+    </section>
+</main>
+
+<footer>
+    <p>© Tom Avsic Engineering | <a href="impressum.html">Legal notice</a></p>
+</footer>
+</body>
+</html>

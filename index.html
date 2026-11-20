@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Rundes CAN-Bus-Display für Echtzeit-Fahrzeugdaten mit MaxxECU-Konfigurationsvorlage, DBC-Import, Navigation und Street Dyno.">
+    <meta name="description" content="Rundes CAN-Bus-Display für Fahrzeugdaten mit MaxxECU-Vorlage, Saab-Trionic-7-Anbindung, DBC-Import, Navigation und Street Dyno.">
     <title>CanDisp 52 – Rundes CAN-Bus-Display für Fahrzeugdaten</title>
     <link rel="canonical" href="https://candisp.de/">
     <link rel="alternate" hreflang="de" href="https://candisp.de/">
@@ -36,6 +36,12 @@
 </header>
 
 <section class="card">
+    <h2>Saab Trionic 7</h2>
+    <p>Zusätzliche Motordaten direkt aus der T7-ECU abfragen und auf deinen Anzeigeseiten darstellen. Im Saab 9-5 erprobt, mit automatischer ECU-Erkennung und Signalauswahl über WLAN.</p>
+    <p class="page-actions"><a class="button-primary" href="saab-trionic-7.html">Saab-T7-Unterstützung ansehen</a></p>
+</section>
+
+<section class="card">
     <h2>CanDisp Street Dyno</h2>
     <p>Beschleunigungsläufe aufzeichnen und Leistung und Drehmoment im Browser vergleichen.</p>
     <p class="page-actions"><a class="button-primary" href="street-dyno.html">Street Dyno ansehen</a></p>
@@ -53,6 +59,7 @@
     <h2>Features</h2>
     <ul>
         <li class="feature">Echtzeit-Anzeige von CAN-Daten</li>
+        <li class="feature"><a href="saab-trionic-7.html">Saab Trionic 7 mit aktiver Abfrage zusätzlicher Motordaten</a></li>
         <li class="feature">1.85" rundes Display, gut ablesbar bei Sonnenlicht</li>
         <li class="feature">16 frei konfigurierbare Anzeigeseiten</li>
         <li class="feature">Turn-by-Turn Navigationsanzeige über BLE</li>
@@ -62,10 +69,9 @@
 </section>
 
 <section>
-    <h2>Besonderheit</h2>
+    <h2>CAN-Empfang und T7-Abfrage</h2>
     <p>
-        Das Gerät arbeitet als passiver CAN-Bus Listener und sendet selbst keine Nachrichten.
-        Bestehende Steuergeräte werden dadurch nicht beeinflusst.
+        Im Listen-Only-Modus empfängt CanDisp reguläre CAN-Nachrichten passiv. Für die T7-Anbindung fragt CanDisp zusätzliche Messwerte aktiv über die Diagnosekommunikation ab.
     </p>
 </section>
 

@@ -9,6 +9,7 @@ const currentHref = currentFile === "index.html" ? homeHref : currentFile;
 const navItems = [
     [homeHref, "Home", "Home"],
     ["street-dyno.html", "Street Dyno", "Street Dyno"],
+    ["saab-trionic-7.html", "Saab T7", "Saab T7"],
     ["gallery.html", "Galerie", "Gallery"],
     ["downloads.html", "Downloads", "Downloads"],
     ["docs.html", "Dokumentation", "Documentation"],

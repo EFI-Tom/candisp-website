@@ -73,8 +73,7 @@
     </p>
 
     <p>
-        Das Gerät arbeitet als passiver CAN-Bus Listener und sendet selbst keine CAN-Nachrichten.
-        Bestehende Steuergeräte werden dadurch nicht beeinflusst.
+        Im Listen-Only-Modus empfängt CanDisp reguläre CAN-Nachrichten passiv. Für die T7-Anbindung fragt CanDisp zusätzliche Messwerte aktiv über die Diagnosekommunikation ab.
     </p>
 
     <h3>Hinweise</h3>
@@ -107,6 +106,7 @@
     <ul>
         <li>CAN-Bus Bitrate</li>
         <li>Signaldefinitionen</li>
+        <li><a href="saab-trionic-7.html">T7-Signalauswahl und Zuordnung zu Anzeigeseiten</a></li>
         <li>Anzeige- und Screen-Konfiguration</li>
         <li>Displayhelligkeit</li>
         <li>DBC-Import</li>
@@ -122,6 +122,12 @@
         alt="CanDisp Webinterface">
 
     <p><a href="maxxecu.html">CAN-Bus-Display für MaxxECU einrichten</a></p>
+</section>
+
+<section class="card">
+    <h2>Saab Trionic 7 einrichten</h2>
+    <p>CanDisp erkennt die T7-ECU und ihre Softwareversion und liest die verfügbaren Symbolinformationen automatisch ein. Im WLAN-Konfigurationsmenü wählst du T7-Signale aus und ordnest sie deinen Anzeigeseiten zu. Die ausgewählten Messwerte werden anschließend zyklisch direkt aus der ECU abgefragt.</p>
+    <p><a href="saab-trionic-7.html">T7-Signalauswahl und erprobte Unterstützung im Saab 9-5</a></p>
 </section>
 
 <section>

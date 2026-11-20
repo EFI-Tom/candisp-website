@@ -60,7 +60,7 @@
         Connect the white wire from CanDisp to CAN Low (CAN_L) and the green wire to CAN High (CAN_H).
     </p>
     <p>
-        In listen-only mode, CanDisp receives CAN messages passively and leaves the operation of existing control units undisturbed.
+        In listen-only mode, CanDisp passively receives regular CAN messages. The T7 connection actively requests additional readings through diagnostic communication.
     </p>
 
     <h3>CAN settings</h3>
@@ -81,6 +81,7 @@
     <ul>
         <li>CAN bus bit rate</li>
         <li>Signal definitions</li>
+        <li><a href="saab-trionic-7.html">T7 signal selection and screen assignments</a></li>
         <li>Display and screen layout settings</li>
         <li>Display brightness</li>
         <li>DBC import</li>
@@ -92,6 +93,12 @@
          src="../images/docs/webinterface.png"
          alt="CanDisp web interface">
     <p><a href="maxxecu.html">Set up a CAN bus display for MaxxECU</a></p>
+</section>
+
+<section class="card">
+    <h2>Set up Saab Trionic 7</h2>
+    <p>CanDisp detects the T7 ECU and its software version and automatically reads the available symbol information. Use the Wi-Fi configuration menu to select T7 signals and assign them to your display screens. CanDisp then cyclically requests the selected readings directly from the ECU.</p>
+    <p><a href="saab-trionic-7.html">T7 signal selection and tested Saab 9-5 support</a></p>
 </section>
 
 <section>
